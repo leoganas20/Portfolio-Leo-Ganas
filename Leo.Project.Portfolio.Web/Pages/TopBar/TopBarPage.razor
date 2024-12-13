@@ -1,15 +1,99 @@
-﻿<header class="top-bar">
+﻿@using MudBlazor.Services
+@implements IBrowserViewportObserver
+@implements IAsyncDisposable
+
+<header class="top-bar">
     <div class="container">
         <div class="logo">
-            <a href="/">Leo Ganas</a>
+            <a href="/">Dev.</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/portfolio" class="active">Portfolio</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
+        @if (new[] { Breakpoint.Xs, Breakpoint.Sm }.Contains(updateBreakpoint))
+        {
+            <div class="d-flex justify-content-end">
+                <MudMenu Icon="@Icons.Material.Filled.Menu" IconColor="Color.Default" AriaLabel="Menu">
+                    <MudMenuItem>Home</MudMenuItem>
+                    <MudMenuItem>About</MudMenuItem>
+                    <MudMenuItem>Experience</MudMenuItem>
+                    <MudMenuItem>Service</MudMenuItem>
+                    <MudMenuItem>Contact</MudMenuItem>
+                </MudMenu>
+            </div>
+        }
+        else
+        {
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/portfolio" class="active">Experience</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        }
+
     </div>
 </header>
+
+
+
+@code{
+    [Inject]  private IBrowserViewportService BrowserViewportService { get; set; }
+
+    private List<Breakpoint> _breakpointHistory = new();
+    private Breakpoint _start;
+    private Breakpoint updateBreakpoint;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await BrowserViewportService.SubscribeAsync(this, fireImmediately: true);
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    public async ValueTask DisposeAsync() => await BrowserViewportService.UnsubscribeAsync(this);
+
+    Guid IBrowserViewportObserver.Id { get; } = Guid.NewGuid();
+
+    ResizeOptions IBrowserViewportObserver.ResizeOptions { get; } = new()
+        {
+            ReportRate = 250,
+            NotifyOnBreakpointOnly = true
+        };
+
+    Task IBrowserViewportObserver.NotifyBrowserViewportChangeAsync(BrowserViewportEventArgs browserViewportEventArgs)
+    {
+        if (browserViewportEventArgs.IsImmediate)
+        {
+            _start = browserViewportEventArgs.Breakpoint;
+        }
+        else
+        {
+            _breakpointHistory.Add(browserViewportEventArgs.Breakpoint);
+        }
+        updateBreakpoint = browserViewportEventArgs.Breakpoint;
+        return InvokeAsync(StateHasChanged);
+    }
+}
+<style>
+    .glow {
+        color: #fff; /* White color for the text */
+        text-shadow: 0 0 5px #B1C29E, /* Red glow */
+        0 0 10px #B1C29E, /* Stronger red glow */
+        0 0 15px #B1C29E, /* Even stronger red glow */
+        0 0 20px #B1C29E; /* Strong red glow */
+    }
+
+    .mud-icon-button {
+        flex: 0 0 auto;
+        padding: 12px;
+        overflow: visible;
+        font-size: 1.5rem;
+        text-align: center;
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        border-radius: 50%;
+        color: white;
+    }
+</style>
