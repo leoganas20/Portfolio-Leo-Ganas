@@ -1,7 +1,11 @@
-﻿namespace Leo.Projects.Portfolio.Web.Pages.ComponentPageBase;
+﻿using Microsoft.AspNetCore.Components;
 
-public class ComponentPageBase
+namespace Leo.Projects.Portfolio.Web.Pages.ComponentPageBase;
+
+public class ComponentPageBase : ComponentBase
 {
     protected bool IsVisible { get; set; }
+
+    
 
 }

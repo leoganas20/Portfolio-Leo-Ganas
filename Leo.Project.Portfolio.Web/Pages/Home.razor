@@ -1,19 +1,20 @@
 ﻿@page "/"
+@inherits HomeBase
 
 <div class="portfolio-container">
-    <Leo.Project.Portfolio.Web.Pages.Loader.LoaderPage />
+    <LoaderPage IsVisible="@IsVisible"/>
 
     <!-- Top Bar -->
-     <Leo.Project.Portfolio.Web.Pages.TopBar.TopBarPage />
+     <TopBarPage />
 
     <!-- Hero Section -->
-  <Leo.Project.Portfolio.Web.Pages.HeroSection.HeroSectionPage />
+    <HeroSectionPage />
 
 
     <!-- Portfolio Gallery -->
-   <Leo.Project.Portfolio.Web.Pages.Gallery.GalleryPage />
+    <GalleryPage />
 
     <!-- Footer -->
-  <Leo.Project.Portfolio.Web.Pages.Footer.FooterPage />
+    <FooterPage />
 
 </div>
