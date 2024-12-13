@@ -48,7 +48,7 @@
                 <MudNavLink Href="/">Home</MudNavLink>
                 <MudNavLink Match="NavLinkMatch.Prefix" Href="/">About</MudNavLink>
                 <MudNavLink Href="/" Disabled="true">Experience</MudNavLink>
-                <MudNavGroup Title="Services" Expanded="@IsExpandedMenu" @onclick="OnExpandMenu">
+                <MudNavGroup Title="Services" Expanded="@(IsExpandedMenu || _expanded)" @onclick="OnExpandMenu">
                     <MudNavLink Href="/">Web Dev</MudNavLink>
                     <MudNavLink Href="/">Mobile Dev</MudNavLink>
                     <MudNavLink Href="/">Game Dev (Unity)</MudNavLink>
@@ -109,6 +109,7 @@
         if(!_expanded){
             IsExpandedMenu = false;
         }
+        StateHasChanged();
     }
 
     private Anchor _anchor = Anchor.Top;
