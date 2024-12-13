@@ -9,26 +9,16 @@
         </div>
         @if (new[] { Breakpoint.Xs, Breakpoint.Sm }.Contains(updateBreakpoint))
         {
-           @*  <MudStack Spacing="2">
+            @*    <MudStack Spacing="2">
                  <MudToggleIconButton @onclick="OnExpandCollapseClick" @bind-Toggled="_expanded"
                                      Icon="@Icons.Material.Filled.Menu"
                                      ToggledIcon="@Icons.Material.Filled.Close"
                                      Style="color: black; font-size: 22px;"
                                      Size="Size.Large" />
-              
-            </MudStack> *@
-            <MudMenu>
-                <ActivatorContent>
-                    <MudIcon Icon="@Icons.Material.Filled.Menu" Style="color: black; font-size: 22px;" Size="Size.Large" />
 
-                </ActivatorContent>
-                <ChildContent>
-                    <MudMenuItem>Profile</MudMenuItem>
-                    <MudMenuItem>Theme</MudMenuItem>
-                    <MudMenuItem>Usage</MudMenuItem>
-                    <MudMenuItem>Sign Out</MudMenuItem>
-                </ChildContent>
-            </MudMenu>
+            </MudStack> *@
+            <MudIcon @onclick="OnExpandCollapseClick" Icon="@Icons.Material.Filled.Menu" Style="color: black; font-size: 22px;" Size="Size.Large" />
+
         }
         else
         {
@@ -42,25 +32,35 @@
                 </ul>
             </nav>
         }
-        
+
     </div>
 </header>
-@* <div class="top-collapse">
-    <div class="container">
-        <MudCollapse Expanded="_expanded" >
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/portfolio" class="active">Experience</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </MudCollapse>
-    </div>
-</div> *@
- 
+
+<MudDrawer @bind-Open="@_expanded" Anchor="@_anchor" Elevation="10000" Variant="@DrawerVariant.Temporary" OverlayAutoClose="@_overlayAutoClose">
+    <MudDrawerHeader Class="d-flex justify-content-between">
+        <MudText Typo="Typo.h6">Menu</MudText>
+        <MudIcon @onclick="OnExpandCollapseClick" Icon="@Icons.Material.Filled.Close" Style="color: black; font-size: 22px;" Size="Size.Large" />
+
+    </MudDrawerHeader>
+    <MudNavMenu>
+        <MudPaper Width="auto" Class="py-3">
+            <MudNavMenu Bordered="true">
+                <MudNavLink Href="/">Home</MudNavLink>
+                <MudNavLink Match="NavLinkMatch.Prefix" Href="/">About</MudNavLink>
+                <MudNavLink Href="/" Disabled="true">Experience</MudNavLink>
+                <MudNavGroup Title="Services" Expanded="@IsExpandedMenu" @onclick="OnExpandMenu">
+                    <MudNavLink Href="/">Web Dev</MudNavLink>
+                    <MudNavLink Href="/">Mobile Dev</MudNavLink>
+                    <MudNavLink Href="/">Game Dev (Unity)</MudNavLink>
+                    <MudNavLink Href="/">Front-End Dev</MudNavLink>
+                    <MudNavLink Href="/">Back-End Dev</MudNavLink>
+                </MudNavGroup>
+                <MudNavLink Href="/">Contact</MudNavLink>
+            </MudNavMenu>
+        </MudPaper>
+    </MudNavMenu>
+</MudDrawer>
+<MudOverlay @bind-Visible="_expanded" DarkBackground />
 @code{
     [Inject]  private IBrowserViewportService BrowserViewportService { get; set; }
 
@@ -106,6 +106,23 @@
     private void OnExpandCollapseClick()
     {
         _expanded = !_expanded;
+        if(!_expanded){
+            IsExpandedMenu = false;
+        }
+    }
+
+    private Anchor _anchor = Anchor.Top;
+    private bool _overlayAutoClose = true;
+
+    private void OpenDrawer(Anchor anchor)
+    {
+        _expanded = true;
+        _anchor = anchor;
+    }
+
+    private bool IsExpandedMenu = false;
+    private void OnExpandMenu(){
+        IsExpandedMenu = !IsExpandedMenu;
     }
 }
 <style>
