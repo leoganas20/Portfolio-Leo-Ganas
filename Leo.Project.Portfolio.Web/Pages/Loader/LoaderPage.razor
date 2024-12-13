@@ -1,0 +1,12 @@
+﻿
+<MudOverlay @bind-Visible="@IsVisible" DarkBackground>
+    <div class="d-flex justify-content-center">
+        <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+    </div>
+</MudOverlay>
+
+@code{
+
+    [Parameter] public bool IsVisible { get; set; }
+    [Parameter] public bool IsClosed { get; set; }
+}
