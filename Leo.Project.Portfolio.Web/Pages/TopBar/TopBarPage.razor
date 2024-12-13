@@ -1,6 +1,6 @@
 ﻿@using MudBlazor.Services
 @implements IBrowserViewportObserver
-@implements IAsyncDisposable
+@implements IAsyncDisposable 
 
 <header class="top-bar">
     <div class="container">
@@ -9,15 +9,26 @@
         </div>
         @if (new[] { Breakpoint.Xs, Breakpoint.Sm }.Contains(updateBreakpoint))
         {
-            <div class="d-flex justify-content-end">
-                <MudMenu Icon="@Icons.Material.Filled.Menu" IconColor="Color.Default" AriaLabel="Menu">
-                    <MudMenuItem>Home</MudMenuItem>
-                    <MudMenuItem>About</MudMenuItem>
-                    <MudMenuItem>Experience</MudMenuItem>
-                    <MudMenuItem>Service</MudMenuItem>
-                    <MudMenuItem>Contact</MudMenuItem>
-                </MudMenu>
-            </div>
+           @*  <MudStack Spacing="2">
+                 <MudToggleIconButton @onclick="OnExpandCollapseClick" @bind-Toggled="_expanded"
+                                     Icon="@Icons.Material.Filled.Menu"
+                                     ToggledIcon="@Icons.Material.Filled.Close"
+                                     Style="color: black; font-size: 22px;"
+                                     Size="Size.Large" />
+              
+            </MudStack> *@
+            <MudMenu>
+                <ActivatorContent>
+                    <MudIcon Icon="@Icons.Material.Filled.Menu" Style="color: black; font-size: 22px;" Size="Size.Large" />
+
+                </ActivatorContent>
+                <ChildContent>
+                    <MudMenuItem>Profile</MudMenuItem>
+                    <MudMenuItem>Theme</MudMenuItem>
+                    <MudMenuItem>Usage</MudMenuItem>
+                    <MudMenuItem>Sign Out</MudMenuItem>
+                </ChildContent>
+            </MudMenu>
         }
         else
         {
@@ -31,12 +42,25 @@
                 </ul>
             </nav>
         }
-
+        
     </div>
 </header>
-
-
-
+@* <div class="top-collapse">
+    <div class="container">
+        <MudCollapse Expanded="_expanded" >
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/portfolio" class="active">Experience</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </MudCollapse>
+    </div>
+</div> *@
+ 
 @code{
     [Inject]  private IBrowserViewportService BrowserViewportService { get; set; }
 
@@ -76,6 +100,13 @@
         updateBreakpoint = browserViewportEventArgs.Breakpoint;
         return InvokeAsync(StateHasChanged);
     }
+
+    bool _expanded = false;
+
+    private void OnExpandCollapseClick()
+    {
+        _expanded = !_expanded;
+    }
 }
 <style>
     .glow {
@@ -96,4 +127,5 @@
         border-radius: 50%;
         color: white;
     }
+ 
 </style>
