@@ -40,7 +40,29 @@ ul {
         justify-content: space-between;
         align-items: center;
     }
-    
+
+.nav-list {
+    list-style: none; /* Removes default list bullets */
+    display: flex; /* Makes the list items inline */
+    align-items: center; /* Vertically align items in the list */
+    gap: 15px; /* Space between list items */
+    margin: 0;
+    padding: 0;
+}
+
+    .nav-list li {
+        display: inline-block; /* Make list items inline */
+    }
+
+.chip-item {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+    .chip-item .mud-chip {
+        box-shadow: none; /* Remove the elevation/shadow from MudChip */
+    }
 /* Top Bar */
 .top-bar {
     background-color: #DCD7C9;
@@ -116,7 +138,7 @@ ul {
     position: absolute; /* Allows positioning of the image inside the section */
     margin-left: 250px;
     transform: translateY(-50%); /* Centers the image exactly in the middle */
-    max-width: 300px; /* Controls the image size */
+    max-width: 260px; /* Controls the image size */
     height: auto;
     object-fit: contain; /* Makes sure the image maintains its aspect ratio and doesn't distort */
     z-index: 1; /* Ensures the image stays behind the text */

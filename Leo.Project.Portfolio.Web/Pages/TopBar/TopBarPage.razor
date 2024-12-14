@@ -36,14 +36,34 @@
         else
         {
             <nav>
-                <ul>
+                <ul class="nav-list">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/portfolio" class="active">Experience</a></li>
                     <li><a href="/services">Services</a></li>
                     <li><a href="/contact">Contact</a></li>
+                    <li class="chip-item">
+                        <MudChip Style="background-color: #A27B5C; color: white"
+                                 CloseIcon="@Icons.Material.Filled.Download"
+                                 T="string"
+                                 Class="mx-5"
+                                 Disabled="@_processing"
+                                 OnClick="ProcessSomething"
+                                 Variant="Variant.Filled">
+                            @if (_processing)
+                            {
+                                <MudText Class="mx-2">Processing</MudText>
+                                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                            }
+                            else
+                            {
+                                <MudText>Download CV <MudIcon Icon="@Icons.Material.Filled.Download" /></MudText>
+                            }
+                        </MudChip>
+                    </li>
                 </ul>
             </nav>
+
         }
 
     </div>
