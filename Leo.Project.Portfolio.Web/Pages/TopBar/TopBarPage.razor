@@ -2,7 +2,7 @@
 @using Leo.Projects.Portfolio.Web.Pages.ComponentPageBase;
 @implements IBrowserViewportObserver
 @implements IAsyncDisposable  
-
+@inject IJSRuntime JS
 @inherits ComponentPageBase
 <header class="top-bar">
     <div class="container">
@@ -152,7 +152,8 @@
     async Task ProcessSomething()
     {
         _processing = true;
-        await Task.Delay(2000);
+        await Task.Delay(1000);
+        await JS.InvokeVoidAsync("downloadCv");
         _processing = false;
     }
 }
