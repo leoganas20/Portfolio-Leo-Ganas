@@ -134,8 +134,9 @@ ul {
     position: relative; /* Ensures the text content stays above the image */
     z-index: 2; /* Ensures text stays on top of the image */
 }
-.burger-btn{
+.burger-btn {
     cursor: pointer;
+  
 }
 .hero-image {
     position: absolute; /* Allows positioning of the image inside the section */
@@ -164,6 +165,7 @@ ul {
     animation-duration: 2s;
 }
 
+ 
 @keyframes fadeInOpacity {
     0% {
         opacity: 0;
@@ -193,7 +195,15 @@ ul {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-
+    .portfolio-items .dep-text {
+        display: -webkit-box; /* Enables the flexible box layout */
+        -webkit-line-clamp: 1; /* Limits the text to a single line */
+        -webkit-box-orient: vertical; /* Specifies the box layout to be vertical */
+        overflow: hidden; /* Hides text that overflows */
+        text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
+        white-space: normal; /* Allows text to wrap */
+        flex-grow: 1;
+    }
 .portfolio-item {
     background-color: white;
     padding: 20px;
@@ -248,6 +258,7 @@ ul {
     }
     
 }
+ 
 /* Media Queries for Responsiveness */
 @media (max-width: 1025px) {
     .top-bar .container {
