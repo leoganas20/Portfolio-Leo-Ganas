@@ -37,12 +37,12 @@
         {
             <nav>
                 <ul class="nav-list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/skills">Skills</a></li>
-                    <li><a href="/portfolio" class="active">Experience</a></li>
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio-gallery" class="active">Experience</a></li>
                    @*  <li><a href="/services">Services</a></li> *@
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li class="chip-item">
                         <MudChip Style="background-color: #A27B5C; color: white"
                                  CloseIcon="@Icons.Material.Filled.Download"
@@ -78,9 +78,9 @@
         <MudNavMenu Style="background: #fcf6e3">
             <MudPaper Width="auto" Class="py-3">
                 <MudNavMenu Bordered="true" Color="Color.Dark">
-                    <MudNavLink Href="/">Home</MudNavLink>
-                    <MudNavLink Match="NavLinkMatch.Prefix" Href="#about">About</MudNavLink>
-                    <MudNavLink Match="NavLinkMatch.Prefix" Href="#skills">Skills</MudNavLink>
+                    <MudNavLink  Href="#hero-section">Home</MudNavLink>
+                    <MudNavLink Href="#about">About</MudNavLink>
+                    <MudNavLink  Href="#skills">Skills</MudNavLink>
                     <MudNavLink Href="#portfolio-gallery" Disabled="false">Experience</MudNavLink>
                   @*   <MudNavGroup Title="Services" Expanded="@(_expanded)" @onclick="OnExpandMenu">
                         <MudNavLink OnClick="@OnExpandCollapseClick">Web Dev</MudNavLink>
