@@ -1,0 +1,27 @@
+﻿ 
+@inherits EmailSenderBase
+  <LoaderPage IsVisible="@IsVisible"/>
+
+<div class="container">
+    <MudCard>
+        <MudCardHeader>
+            Send Email
+        </MudCardHeader>
+        <MudCardContent>
+            <div class="row">
+                <div class="col-12">
+                    <MudTextField @bind-Value="@EmailRequest.SenderEmail" Label="Enter your email" Variant="Variant.Outlined"></MudTextField>
+                </div>
+                <div class="col-12">
+                    <MudTextField @bind-Value="@EmailRequest.Subject" Label="Subject" Variant="Variant.Outlined"></MudTextField>
+                </div>
+                <div class="col-12">
+                    <MudTextField T="string" Label="Body" Variant="Variant.Outlined" @bind-Value="@EmailRequest.Body" Lines="3" />
+                </div>
+            </div>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton OnClick="@(() => SendEmail(EmailRequest))" Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.Send" Color="Color.Primary">Send Email</MudButton>
+        </MudCardActions>
+    </MudCard>
+</div>

@@ -28,12 +28,27 @@ namespace Leo.Project.Portfolio.Api
             //                          .AllowAnyMethod()
             //                          .AllowAnyHeader());
             //});
+
+            var env = builder.Environment;
+
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowBlazor",
-                    builder => builder.WithOrigins("https://leoganas-developer.com/")
-                                      .AllowAnyMethod()
-                                      .AllowAnyHeader());
+                if (env.IsDevelopment())
+                {
+                    // Development environment CORS
+                    options.AddPolicy("AllowBlazor",
+                        policy => policy.WithOrigins("https://localhost:7275") // Local development origin
+                                        .AllowAnyMethod()
+                                        .AllowAnyHeader());
+                }
+                else
+                {
+                    // Production environment CORS
+                    options.AddPolicy("AllowBlazor",
+                        policy => policy.WithOrigins("https://leoganas-developer.com/") // Production origin
+                                        .AllowAnyMethod()
+                                        .AllowAnyHeader());
+                }
             });
             // Add Swagger services
             builder.Services.AddEndpointsApiExplorer();

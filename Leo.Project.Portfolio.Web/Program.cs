@@ -14,12 +14,18 @@ namespace Leo.Project.Portfolio.Web
             builder.RootComponents.Add<App>("#app");
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
+            var env = builder.HostEnvironment;
+            // Set the API base URL depending on the environment
+            var apiBaseUrl = env.IsDevelopment()
+                ? "https://localhost:7008" // Development URL
+                : "https://leoprojectportfolioapi20241218212239.azurewebsites.net/"; // Production URL
+
             // Add HttpClient with the API base URL
             builder.Services.AddScoped(sp => new HttpClient
             {
-                BaseAddress = new Uri("https://localhost:7008") // Use your API URL here
+                BaseAddress = new Uri(apiBaseUrl)
             });
-
+            builder.Services.AddScoped<RequestEmailService>();
             builder.Services.AddMudServices();
             builder.Services.AddScoped<PortfolioApiService>();
             builder.Services.AddMudServices(config =>
