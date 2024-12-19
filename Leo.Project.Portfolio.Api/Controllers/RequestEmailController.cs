@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Leo.Project.Portfolio.Api.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class RequestEmailController : ControllerBase

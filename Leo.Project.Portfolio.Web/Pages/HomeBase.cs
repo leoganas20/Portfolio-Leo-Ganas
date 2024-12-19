@@ -60,7 +60,7 @@ public class HomeBase : ComponentPageBase
             {
                 config.RequireInteraction = true;
                 config.ShowCloseIcon = true;
-                
+                config.VisibleStateDuration = 2000;
             });
 
         }
