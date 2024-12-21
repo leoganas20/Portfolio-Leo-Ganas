@@ -18,24 +18,30 @@
                             </div>
                             <div class="col-12 d-flex justify-content-between mt-5 gap-5">
                                
-                                <div class="web-notes">
-                                    <MudIcon Icon="@Icons.Material.Filled.Web" Size="Size.Large" Color="Color.Primary" />
-                                    <MudText Typo="Typo.h6">Web Development</MudText>
-                                    <MudText Typo="Typo.subtitle1">
-                                        I’ve built intuitive dashboards for web-based infrastructure management, allowing administrators to monitor inspection data, track site locations, and generate reports.
-                                    </MudText>
-                                </div>
-                                <div class="mobile-notes">
-                                    <MudIcon Icon="@Icons.Material.Filled.Smartphone" Size="Size.Large" Color="Color.Primary" />
-                                    <MudText Typo="Typo.h6">Mobile Development</MudText>
-                                    <MudText Typo="Typo.subtitle1">
-                                        I develop mobile solutions for site inspections, enabling field agents to capture geolocated photos and data offline. Once online, the data is automatically synced to the server for processing.
-                                    </MudText>
-                                </div>
+                                <MudGrid>
+                                     <MudItem xs="12" sm="12" lg="6" md="6">
+                                        <div class="web-notes">
+                                            <MudIcon Icon="@Icons.Material.Filled.Web" Size="Size.Large" Color="Color.Primary" />
+                                            <MudText Typo="Typo.h6">Web Development</MudText>
+                                            <MudText Typo="Typo.subtitle1">
+                                                I’ve built intuitive dashboards for web-based infrastructure management, allowing administrators to monitor inspection data, track site locations, and generate reports.
+                                            </MudText>
+                                        </div>
+                                     </MudItem>
+                                    <MudItem xs="12" sm="12" lg="6" md="6">
+                                        <div class="mobile-notes">
+                                            <MudIcon Icon="@Icons.Material.Filled.Smartphone" Size="Size.Large" Color="Color.Primary" />
+                                            <MudText Typo="Typo.h6">Mobile Development</MudText>
+                                            <MudText Typo="Typo.subtitle1">
+                                                I develop mobile solutions for site inspections, enabling field agents to capture geolocated photos and data offline. Once online, the data is automatically synced to the server for processing.
+                                            </MudText>
+                                        </div>
+                                    </MudItem>
+                                </MudGrid>
                             </div>
                         </div>
                     </MudItem>
-                    <MudItem xs="12" sm="12" lg="6" md="12">
+                    <MudItem Class="project" xs="12" sm="12" lg="6" md="12">
                         <div class="web-section">
 
                             <MudAppBar Style="background-color: #131a1c; height: 50px; z-index:0; border-radius: 10px;" Fixed="false" Dense="true" Elevation="0">

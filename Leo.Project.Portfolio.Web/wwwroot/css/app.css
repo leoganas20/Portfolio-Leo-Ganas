@@ -390,6 +390,7 @@ ul {
     z-index: 20;
 }
 
+
 .my-work {
     padding: 60px 0;
     z-index: 20;
@@ -601,7 +602,23 @@ ul {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 782px) {
+    .project{
+        display: none;
+    }
+}
+
+@media (max-width: 1279px) and (min-width: 782px) {
+    .project {
+        display: flex;
+        justify-content: center;
+    }
+
+    .web-section {
+        margin-top: 50px;
+    }
+}
+    @media (max-width: 480px) {
     .portfolio-items {
         grid-template-columns: 1fr;
     }
@@ -621,9 +638,11 @@ ul {
         .hero-section .btn {
             font-size: 14px;
         }
+
     .hero-image {
         max-width: 200px;
     }
+
     .about-me-small {
         display: block;
     }
