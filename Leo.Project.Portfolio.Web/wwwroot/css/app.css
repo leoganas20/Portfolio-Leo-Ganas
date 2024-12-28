@@ -402,6 +402,16 @@ ul {
         margin-bottom: 40px;
     }
 
+.services {
+    padding: 60px 0;
+    z-index: 20;
+}
+
+    .services h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
 #about {
     padding: 60px 0;
     z-index: 20;
