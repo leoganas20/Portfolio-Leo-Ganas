@@ -1,0 +1,292 @@
+@using System.Linq
+<div class="contribution-dashboard">
+    <div class="contribution-main">
+        <div class="graph-header d-flex justify-space-between align-center px-4 pt-4">
+            <div>
+                <MudText Typo="Typo.subtitle2" Style="font-weight: 600; color: var(--gh-text);">
+                    @_totalContributions contributions in @_currentYear
+                </MudText>
+            </div>
+            <div class="d-none d-md-block">
+                 <MudText Typo="Typo.caption" Style="color: var(--gh-text-muted);">
+                    Technical Commitment & Activity
+                </MudText>
+            </div>
+        </div>
+
+        <div class="contribution-graph-container">
+            <div class="graph-scroll-wrapper">
+                <div class="graph-grid">
+                    @* Day labels on the left *@
+                    <div class="graph-day-labels d-none d-md-flex">
+                        <span>Mon</span>
+                        <span>Wed</span>
+                        <span>Fri</span>
+                    </div>
+
+                    @for (int week = 0; week < 52; week++)
+                    {
+                        <div class="graph-column">
+                            @for (int day = 0; day < 7; day++)
+                            {
+                                var intensity = GetIntensityForYearAndDay(_currentYear, week, day);
+                                <div class="graph-square level-@intensity" title="Activity on day @(day+1), week @(week+1): Level @intensity"></div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="graph-footer d-flex align-center justify-space-between mt-4 px-2">
+                <div class="d-flex align-center gap-2">
+                    <MudText Typo="Typo.caption" Style="color: var(--gh-text-muted); font-size: 11px;">
+                        Learn more about how we count contributions
+                    </MudText>
+                </div>
+                <div class="d-flex align-center gap-2">
+                    <MudText Typo="Typo.caption" Style="font-size: 10px; color: var(--gh-text-muted);">Less</MudText>
+                    <div class="graph-square level-0"></div>
+                    <div class="graph-square level-1"></div>
+                    <div class="graph-square level-2"></div>
+                    <div class="graph-square level-3"></div>
+                    <div class="graph-square level-4"></div>
+                    <MudText Typo="Typo.caption" Style="font-size: 10px; color: var(--gh-text-muted);">More</MudText>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* Year Selector Sidebar *@
+    <div class="year-selector">
+        @foreach (var year in _availableYears)
+        {
+            <div class="year-item @(year == _currentYear ? "active" : "")" @onclick="() => SelectYear(year)">
+                @year
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private int _currentYear = 2026; // Fixed for consistent "Commit Art" display
+    private List<int> _availableYears => Enumerable.Range(2020, 2026 - 2020 + 1).Reverse().ToList();
+    private int _totalContributions => CalculateTotalForYear(_currentYear);
+
+    private void SelectYear(int year)
+    {
+        _currentYear = year;
+        StateHasChanged();
+    }
+
+    private int GetIntensityForYearAndDay(int year, int week, int day)
+    {
+        // Special "5+ YEARS" pattern for the main dashboard view
+        if (year == 2026 && IsInPattern(week, day))
+        {
+            return 4;
+        }
+
+        // Standard procedural logic for other years/background
+        var seed = year * 1000 + week * 7 + day;
+        var rnd = new Random(seed);
+        int baseProb = rnd.Next(0, 100);
+        int threshold = 40 - (year - 2020) * 2; 
+        
+        if (baseProb < threshold) return 0;
+        if (baseProb < 70) return 1;
+        if (baseProb < 85) return 2;
+        if (baseProb < 95) return 3;
+        return 4;
+    }
+
+    private bool IsInPattern(int week, int day)
+    {
+        // Grid is 7 rows high (Sunday-Saturday), 52 cols wide.
+        // We use Rows 1-5 (5 pixels high) for the text.
+        int w = week - 2; // Start from week 2
+        int d = day - 1; 
+
+        if (d < 0 || d > 4) return false;
+
+        // "5" (Cols 0-4)
+        if (w >= 0 && w <= 4) {
+            if (d == 0 || d == 2 || d == 4) return true;
+            if (d == 1 && w == 0) return true;
+            if (d == 3 && w == 4) return true;
+        }
+
+        // "+" (Cols 6-10)
+        if (w >= 6 && w <= 10) {
+            if (d == 2) return true;
+            if (w == 8) return true;
+        }
+
+        // "Y" (Cols 13-17)
+        if (w >= 13 && w <= 17) {
+            if (d <= 1 && (w == 13 || w == 17)) return true;
+            if (d == 2 && (w >= 14 && w <= 16)) return true;
+            if (d >= 3 && w == 15) return true;
+        }
+
+        // "E" (Cols 20-23)
+        if (w >= 20 && w <= 23) {
+            if (w == 20) return true;
+            if (d == 0 || d == 2 || d == 4) return true;
+        }
+
+        // "A" (Cols 26-30)
+        if (w >= 26 && w <= 30) {
+            if (w == 26 || w == 30) return true; // Sides (all 5 rows)
+            if (d == 0 || d == 2) return true;   // Top and Middle bar
+        }
+
+        // "R" (Cols 33-37)
+        if (w >= 33 && w <= 37) {
+            if (w == 33) return true; // Left side
+            if (d == 0 || d == 2) return true; // Top and Middle
+            if (w == 37 && d <= 2) return true; // Top-right curve
+            if (w == 35 && d == 3) return true; // Leg part 1
+            if (w == 37 && d == 4) return true; // Leg part 2
+        }
+
+        // "S" (Cols 40-44)
+        if (w >= 40 && w <= 44) {
+            if (d == 0 || d == 2 || d == 4) return true;
+            if (d == 1 && w == 40) return true;
+            if (d == 3 && w == 44) return true;
+        }
+
+        return false;
+    }
+
+    private int CalculateTotalForYear(int year)
+    {
+        return 1200 + (year - 2020) * 150 + (year % 3 * 42);
+    }
+}
+
+<style>
+    .contribution-dashboard {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+        padding-right: 12px;
+    }
+
+    .contribution-main {
+        flex: 1;
+        background: var(--gh-canvas);
+        border: 1px solid var(--gh-border);
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .contribution-graph-container {
+        padding: 16px;
+        position: relative;
+    }
+
+    .graph-scroll-wrapper {
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .graph-grid {
+        display: flex;
+        gap: 3px;
+        width: max-content;
+        position: relative;
+    }
+
+    .graph-day-labels {
+        flex-direction: column;
+        justify-content: space-around;
+        padding-right: 8px;
+        font-size: 10px;
+        color: var(--gh-text-muted);
+        height: 105px; /* 7 squares + gaps */
+    }
+
+    .graph-column {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .graph-square {
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+        transition: transform 0.1s;
+        cursor: pointer;
+    }
+
+    .graph-square:hover {
+        transform: scale(1.4);
+        outline: 1px solid var(--gh-text);
+        z-index: 10;
+        box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    .level-0 { background-color: var(--gh-green-0); }
+    .level-1 { background-color: var(--gh-green-1); }
+    .level-2 { background-color: var(--gh-green-2); }
+    .level-3 { background-color: var(--gh-green-3); }
+    .level-4 { background-color: var(--gh-green-4); }
+
+    /* Year Selector */
+    .year-selector {
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding-top: 8px;
+    }
+
+    .year-item {
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 13px;
+        cursor: pointer;
+        color: var(--gh-text);
+        transition: 0.2s;
+        text-align: left;
+    }
+
+    .year-item:hover {
+        background-color: var(--gh-border);
+    }
+
+    .year-item.active {
+        background-color: var(--gh-primary);
+        color: white;
+        font-weight: 600;
+    }
+
+    /* Custom Scrollbar */
+    .graph-scroll-wrapper::-webkit-scrollbar {
+        height: 6px;
+    }
+    .graph-scroll-wrapper::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .graph-scroll-wrapper::-webkit-scrollbar-thumb {
+        background: var(--gh-border);
+        border-radius: 10px;
+    }
+
+    @@media (max-width: 768px) {
+        .contribution-dashboard {
+            flex-direction: column;
+        }
+        .year-selector {
+            width: 100%;
+            flex-direction: row;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+        .year-item {
+            white-space: nowrap;
+        }
+    }
+</style>

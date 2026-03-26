@@ -1,20 +1,18 @@
-﻿@using MudBlazor.Services
+@using MudBlazor.Services
 @using Leo.Projects.Portfolio.Web.Pages.ComponentPageBase;
 @implements IBrowserViewportObserver
 @implements IAsyncDisposable  
 @inject IJSRuntime JS
 @inherits ComponentPageBase
-<header class="top-bar">
+<header class="top-bar" style="background-color: var(--gh-bg); border-bottom: 1px solid var(--gh-border); color: var(--gh-text);">
     <div class="container">
         <div class="logo">
-            @* <a href="/">Leo Dev.</a> *@
-            <img src="/images/LGdevLogo.png" @onho width="100" style="object-fit: contain;">
+            <img src="/images/LGdevLogo.png" width="100" style="object-fit: contain; filter: brightness(0) invert(1);">
         </div>
         @if (new[] { Breakpoint.Xs, Breakpoint.Sm }.Contains(updateBreakpoint))
         {
              <div class="btn-group">
-
-                <MudChip Style="background-color: #01204E; color: white" CloseIcon="@Icons.Material.Filled.Download" T="string" Class="mx-5" Disabled="@_processing" OnClick="ProcessSomething" Variant="Variant.Filled">
+                <MudChip T="string" Style="background-color: var(--gh-primary); color: white;" Class="mx-5" Disabled="@_processing" OnClick="ProcessSomething" Variant="Variant.Filled">
                     @if (_processing)
                     {
                         <MudText Class="mx-2">Processing</MudText>
@@ -22,74 +20,65 @@
                     }
                     else
                     {
-                        <MudText>Download CV <MudIcon Icon="@Icons.Material.Filled.Download" /></MudText>
+                        <div class="d-flex align-center">
+                            <MudIcon Icon="@Icons.Material.Filled.Download" Size="Size.Small" Style="color: white;" />
+                            <MudText Class="ml-1" Style="color: white;">CV</MudText>
+                        </div>
                     }
                 </MudChip>
 
                 <MudIcon Class="mt-1 burger-btn" @onclick="OnExpandCollapseClick"
                          Icon="@Icons.Material.Filled.Menu"
-                         Style="color: black; font-size: 32px;"
+                         Style="color: var(--gh-text); font-size: 32px;"
                          Size="Size.Large" />
-               
              </div>
         }
         else
         {
             <nav>
                 <ul class="nav-list">
-                    <li><a href="#hero-section">Home</a></li>
-                  @*   <li><a href="#about">About</a></li> *@
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio-gallery">Experience</a></li>
-                   @*  <li><a href="/services">Services</a></li> *@
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hero-section" style="color: var(--gh-text);">Home</a></li>
+                    <li><a href="#services" style="color: var(--gh-text);">Services</a></li>
+                    <li><a href="#skills" style="color: var(--gh-text);">Skills</a></li>
+                    <li><a href="#portfolio-gallery" style="color: var(--gh-text);">Experience</a></li>
+                    <li><a href="#contact" style="color: var(--gh-text);">Contact</a></li>
                     <li class="chip-item">
-                        <MudChip Style="background-color: #133E87; color: white"
-                                 CloseIcon="@Icons.Material.Filled.Download"
-                                 T="string"
-                                 Class="mx-5"
+                        <MudChip T="string" Style="background-color: var(--gh-primary); color: white; height: 32px; border-radius: 6px;"
+                                 Class="mx-5 px-4"
                                  Disabled="@_processing"
                                  OnClick="ProcessSomething"
                                  Variant="Variant.Filled">
                             @if (_processing)
                             {
-                                <MudText Class="mx-2">Processing</MudText>
-                                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                                <MudText Class="mx-2" Style="color: white;">Processing</MudText>
+                                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" Style="color: white;" />
                             }
                             else
                             {
-                                <MudText>Download CV <MudIcon Icon="@Icons.Material.Filled.Download" /></MudText>
+                                <MudIcon Icon="@Icons.Material.Filled.Download" Size="Size.Small" Style="color: white;" />
+                                <MudText Style="font-weight: 600; font-size: 14px; color: white;" Class="ml-2 text-white">Download CV</MudText>
+                               
                             }
                         </MudChip>
                     </li>
                 </ul>
             </nav>
-
         }
-
     </div>
 
-    <MudDrawer Style="color: #2C3639; background-color:#DCD7C9;" @bind-Open="@_expanded" Anchor="@_anchor" Elevation="10000" Variant="@DrawerVariant.Temporary" OverlayAutoClose="@_overlayAutoClose">
+    <MudDrawer Style="color: var(--gh-text); background-color: var(--gh-canvas); border-left: 1px solid var(--gh-border);" @bind-Open="@_expanded" Anchor="@_anchor" Elevation="0" Variant="@DrawerVariant.Temporary" OverlayAutoClose="@_overlayAutoClose">
         <MudDrawerHeader Class="d-flex justify-content-between">
-            <MudText Typo="Typo.h6">Menu</MudText>
-            <MudIcon Class="burger-btn" @onclick="OnExpandCollapseClick" Icon="@Icons.Material.Filled.Close" Style="color: black; font-size: 32px;" Size="Size.Large" />
-
+            <MudText Typo="Typo.h6" Style="color: var(--gh-text);">Menu</MudText>
+            <MudIcon Class="burger-btn" @onclick="OnExpandCollapseClick" Icon="@Icons.Material.Filled.Close" Style="color: var(--gh-text); font-size: 32px;" Size="Size.Large" />
         </MudDrawerHeader>
-        <MudNavMenu Style="background: #fcf6e3">
-            <MudPaper Width="auto" Class="py-3">
-                <MudNavMenu Bordered="true" Color="Color.Dark">
-                    <MudNavLink Style="color:black"  Href="#hero-section">Home</MudNavLink>
-                   @*  <MudNavLink Href="#about">About</MudNavLink> *@
-                    <MudNavLink  Href="#skills">Skills</MudNavLink>
-                    <MudNavLink Href="#portfolio-gallery" Disabled="false">Experience</MudNavLink>
-                  @*   <MudNavGroup Title="Services" Expanded="@(_expanded)" @onclick="OnExpandMenu">
-                        <MudNavLink OnClick="@OnExpandCollapseClick">Web Dev</MudNavLink>
-                        <MudNavLink OnClick="@OnExpandCollapseClick">Mobile Dev</MudNavLink>
-                        <MudNavLink OnClick="@OnExpandCollapseClick">Game Dev (Unity)</MudNavLink>
-                        <MudNavLink OnClick="@OnExpandCollapseClick">Front-End Dev</MudNavLink>
-                        <MudNavLink OnClick="@OnExpandCollapseClick">Back-End Dev</MudNavLink>
-                    </MudNavGroup> *@
-                    <MudNavLink Href="#contact">Contact</MudNavLink>
+        <MudNavMenu Style="background: var(--gh-canvas)">
+            <MudPaper Width="auto" Class="py-3" Elevation="0" Style="background: transparent;">
+                <MudNavMenu Bordered="true">
+                    <MudNavLink Style="color: var(--gh-text)" Href="#hero-section">Home</MudNavLink>
+                    <MudNavLink Style="color: var(--gh-text)" Href="#services">Services</MudNavLink>
+                    <MudNavLink Style="color: var(--gh-text)" Href="#skills">Skills</MudNavLink>
+                    <MudNavLink Style="color: var(--gh-text)" Href="#portfolio-gallery">Experience</MudNavLink>
+                    <MudNavLink Style="color: var(--gh-text)" Href="#contact">Contact</MudNavLink>
                 </MudNavMenu>
             </MudPaper>
         </MudNavMenu>
@@ -205,4 +194,5 @@
         background-color: var(--mud-palette-dark-hover);
         font-size: 16px;
     }
+    
 </style>

@@ -1,55 +1,49 @@
-﻿
-<section id="contact" class="contact mb-10">
-    <div class="container">
-        <h2>Contact</h2>
-        <MudGrid>
 
-            <MudItem xs="12" sm="6" lg="3" md="6" Style="border-radius: 10px;">
+<section id="contact" class="contact mb-10" style="background-color: var(--gh-bg); border-top: 1px solid var(--gh-border); padding: 80px 0;">
+    <div class="container">
+        <MudText Typo="Typo.h4" Style="font-weight: 800; color: var(--gh-text); text-align: center; margin-bottom: 48px;">Get in Touch</MudText>
+        <MudGrid>
+            <MudItem xs="12" sm="6" lg="3" md="6">
                 <div class="contact-card">
                     <div class="banner"></div>
                     <div class="contact-info">
-                        @* <h3>John Doe</h3> *@
                         <div class="mt-4">
-                            <MudLink Href="https://www.linkedin.com/in/leo-ganas-468b50212/" Target="_blank" Typo="Typo.h6">View Profile</MudLink>
+                            <a href="https://www.linkedin.com/in/leo-ganas-468b50212/" target="_blank" class="contact-link">LinkedIn Profile</a>
                         </div>
-                        <p>Leo Ganas</p>
+                        <p class="mt-2">Leonardo L. Ganas Jr.</p>
                     </div>
                 </div>
             </MudItem>
-            <MudItem xs="12" sm="6" lg="3" md="6" Style="border-radius: 10px;">
+            <MudItem xs="12" sm="6" lg="3" md="6">
                 <div class="contact-card">
                     <div class="banner-upwork"></div>
                     <div class="contact-info">
-                        @* <h3>John Doe</h3> *@
                         <div class="mt-4">
-                            <MudLink Href="https://www.upwork.com/freelancers/~016297b0547fe38cce?mp_source=share" Target="_blank" Typo="Typo.h6">View Profile</MudLink>
+                            <a href="https://www.upwork.com/freelancers/~016297b0547fe38cce?mp_source=share" target="_blank" class="contact-link">Upwork Profile</a>
                         </div>
-                        <p>Leo Ganas</p>
+                        <p class="mt-2">Leonardo L. Ganas Jr.</p>
                     </div>
                 </div>
             </MudItem>
-            <MudItem xs="12" sm="6" lg="3" md="6" Style="border-radius: 10px;">
+            <MudItem xs="12" sm="6" lg="3" md="6">
                 <div class="contact-card">
                     <div class="banner-whatsup"></div>
                     <div class="contact-info">
-                        @* <h3>John Doe</h3> *@
                         <div class="mt-4">
-                            <MudLink Href="https://wa.me/+639161452948" Target="_blank" Typo="Typo.h6">View WhatsApp</MudLink>
+                            <a href="https://wa.me/+639161452948" target="_blank" class="contact-link">WhatsApp</a>
                         </div>
-                        <p>+63 9161452948</p>
-
+                        <p class="mt-2">+63 916 145 2948</p>
                     </div>
                 </div>
             </MudItem>
-            <MudItem xs="12" sm="6" lg="3" md="6" Style="border-radius: 10px;">
+            <MudItem xs="12" sm="6" lg="3" md="6">
                 <div class="contact-card">
                     <div class="banner-gmail"></div>
                     <div class="contact-info">
-                        @* <h3>John Doe</h3> *@
                         <div class="mt-4">
-                            <MudLink Href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGKnGfxbxVDpCxhtFWHfPHfvTPqJmWTrtxMmcHFvBthwHQwGKXBSzzVggMvzkNstFBQfBbc" Target="_blank" Typo="Typo.h6">Email Me</MudLink>
+                            <a href="mailto:leoganas.jr@gmail.com" target="_blank" class="contact-link">Email Me</a>
                         </div>
-                        <p>leoganas.jr@gmail.com</p>
+                        <p class="mt-2">leoganas.jr@gmail.com</p>
                     </div>
                 </div>
             </MudItem>
@@ -59,125 +53,59 @@
 
 <style>
     .contact-card {
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: var(--gh-canvas);
+        border: 1px solid var(--gh-border);
+        border-radius: 12px;
         overflow: hidden;
         width: 100%;
         text-align: center;
+        transition: transform 0.2s, border-color 0.2s;
     }
-
-    .banner {
+    .contact-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--gh-text-muted);
+    }
+    .contact-link {
+        font-weight: 600;
+        color: var(--gh-primary);
+        font-size: 16px;
+        text-decoration: none;
+    }
+    .contact-link:hover {
+        text-decoration: underline;
+    }
+    .banner, .banner-upwork, .banner-whatsup, .banner-gmail {
         position: relative;
         height: 100px;
-        background-color: #d5ebf7; /* LinkedIn blue color */
-        background-image: url('/images/LinkedIn-Logo.wine.svg'); /* Path to image in wwwroot */
-        background-size: cover; /* Ensure the image fits the circle */
-        background-position: center; /* Center the image in the circle */
+        background-color: var(--gh-bg);
+        background-size: cover;
+        background-position: center;
     }
+    .banner { background-image: url('/images/LinkedIn-Logo.wine.svg'); }
+    .banner-upwork { background-image: url('/images/upwork-blue.png'); }
+    .banner-whatsup { background-image: url('/images/whatsapp-banner.png'); }
+    .banner-gmail { background-image: url('/images/gmail-banner.png'); }
 
-        .banner::before {
-            content: '';
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background-color: white;
-            background-image: url('/images/LinkedIn_logo.png'); /* Path to image in wwwroot */
-            background-size: cover; /* Ensure the image fits the circle */
-            background-position: center; /* Center the image in the circle */
-            border-radius: 50%;
-            border: 2px solid white;
-        }
-
-    .banner-upwork {
-        position: relative;
-        height: 100px;
-        background-color: #d5ebf7; /* LinkedIn blue color */
-        background-image: url('/images/upwork-blue.png'); /* Path to image in wwwroot */
-        background-size: cover; /* Ensure the image fits the circle */
-        background-position: center; /* Center the image in the circle */
+    .banner::before, .banner-upwork::before, .banner-whatsup::before, .banner-gmail::before {
+        content: '';
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        border-radius: 50%;
+        border: 3px solid var(--gh-canvas);
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
+    .banner::before { background-image: url('/images/LinkedIn_logo.png'); }
+    .banner-upwork::before { background-image: url('/images/upwork-rounded.svg'); }
+    .banner-whatsup::before { background-image: url('/images/whatsapp-icon.svg'); }
+    .banner-gmail::before { background-image: url('/images/gmail-icon.png'); }
 
-        .banner-upwork::before {
-            content: '';
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background-color: white;
-            background-image: url('/images/upwork-rounded.svg'); /* Path to image in wwwroot */
-            background-size: cover; /* Ensure the image fits the circle */
-            background-position: center; /* Center the image in the circle */
-            border-radius: 50%;
-            border: 2px solid white;
-        }
-
-    .banner-whatsup {
-        position: relative;
-        height: 100px;
-        background-color: #d5ebf7; /* LinkedIn blue color */
-        background-image: url('/images/whatsapp-banner.png'); /* Path to image in wwwroot */
-        background-size: cover; /* Ensure the image fits the circle */
-        background-position: center; /* Center the image in the circle */
-    }
-
-        .banner-whatsup::before {
-            content: '';
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background-color: white;
-            background-image: url('/images/whatsapp-icon.svg'); /* Path to image in wwwroot */
-            background-size: cover; /* Ensure the image fits the circle */
-            background-position: center; /* Center the image in the circle */
-            border-radius: 50%;
-            border: 2px solid white;
-        }
-
-    .banner-gmail {
-        position: relative;
-        height: 100px;
-        background-color: #d5ebf7; /* LinkedIn blue color */
-        background-image: url('/images/gmail-banner.png'); /* Path to image in wwwroot */
-        background-size: cover; /* Ensure the image fits the circle */
-        background-position: center; /* Center the image in the circle */
-    }
-
-        .banner-gmail::before {
-            content: '';
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background-color: white;
-            background-image: url('/images/gmail-icon.png'); /* Path to image in wwwroot */
-            background-size: cover; /* Ensure the image fits the circle */
-            background-position: center; /* Center the image in the circle */
-            border-radius: 50%;
-            border: 2px solid #99a8b0;
-        }
-    .contact-info {
-        padding: 20px;
-    }
-
-        .contact-info h3 {
-            margin: 10px 0 5px;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .contact-info p {
-            margin: 0;
-            color: #777;
-        }
+    .contact-info { padding: 32px 20px 20px; }
+    .contact-info p { margin: 0; color: var(--gh-text-muted); font-size: 14px; }
 </style>

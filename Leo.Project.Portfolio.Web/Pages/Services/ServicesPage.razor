@@ -1,72 +1,153 @@
-﻿
-
-<section id="services" class="services">
+<section id="services" class="services-section" style="padding: 100px 0; background-color: var(--gh-bg);">
     <div class="container">
-        <h2>Services</h2>
-        <MudCard Elevation="2">
-            <MudCardContent>
-              <div class="d-flex justify-content-between">
-                  <div class="container">
+        <div class="d-flex align-center mb-12">
+            <MudIcon Icon="@Icons.Material.Filled.Terminal" Style="color: var(--gh-primary); font-size: 28px; margin-right: 12px;" />
+            <MudText Typo="Typo.h5" Style="font-weight: 700; color: #fff; letter-spacing: -0.5px;">Services / Expertise</MudText>
+        </div>
 
-                        <div class="web-container" style="height: 370px; background-color: #131a1c; border-radius: 20px;">
-                            <MudAppBar Style="background-color: #131a1c; height: 50px; z-index:0; border-radius: 10px;" Fixed="false" Dense="true" Elevation="4">
-                                <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" Size="Size.Small" />
-                                <MudSpacer />
-                                <MudBadge Color="Color.Success" Overlap="true" Bordered="true">
-                                    <MudAvatar Size="Size.Small">
-                                        <MudIconButton Icon="@Icons.Material.Filled.Person" Color="Color.Inherit" Size="Size.Small" />
-                                    </MudAvatar>
-                                </MudBadge>
-                            </MudAppBar>
+        <div class="github-services-grid">
+            <!-- Full-Stack Web -->
+            <div class="gh-service-card">
+                <div class="gh-service-header">
+                    <MudIcon Icon="@Icons.Material.Filled.Web" Style="color: #58a6ff; font-size: 20px;" />
+                    <MudText Typo="Typo.subtitle1" Style="font-weight: 600; color: #58a6ff;">full-stack-web-development</MudText>
+                </div>
+                <MudText Typo="Typo.body2" Style="color: #8b949e; line-height: 1.6; margin: 12px 0;">
+                    Scalable web applications built with **Blazor** and **ASP.NET Core**. Clean Architecture and CQRS for enterprise reliability.
+                </MudText>
+                <div class="gh-service-meta">
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #3b82f6;"></div> C#</span>
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #71b5fb;"></div> Blazor</span>
+                </div>
+            </div>
 
-                            <div class="container d-flex justify-content-between gap-3">
-                                 <MudCard Elevation="3" Square="true" Outlined="true" Style="background-color: white; height: 100px; width: 250px; margin-top: 10px; border-radius: 10px;">
+            <!-- Mobile Apps -->
+            <div class="gh-service-card">
+                <div class="gh-service-header">
+                    <MudIcon Icon="@Icons.Material.Filled.Smartphone" Style="color: var(--gh-green-4); font-size: 20px;" />
+                    <MudText Typo="Typo.subtitle1" Style="font-weight: 600; color: var(--gh-green-4);">mobile-application-development</MudText>
+                </div>
+                <MudText Typo="Typo.body2" Style="color: #8b949e; line-height: 1.6; margin: 12px 0;">
+                    Cross-platform native applications using **.NET MAUI** and **Blazor Hybrid**. Offline-first and GPS-enabled systems.
+                </MudText>
+                <div class="gh-service-meta">
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: var(--gh-green-4);"></div> .NET MAUI</span>
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #ef4444;"></div> iOS/Android</span>
+                </div>
+            </div>
 
-                                 </MudCard>
-                                <MudCard Elevation="3" Square="true" Outlined="true" Style="background-color: white; height: 100px; width: 250px; margin-top: 10px; border-radius: 10px;">
+            <!-- Enterprise Solutions -->
+            <div class="gh-service-card">
+                <div class="gh-service-header">
+                    <MudIcon Icon="@Icons.Material.Filled.Dns" Style="color: #d29922; font-size: 20px;" />
+                    <MudText Typo="Typo.subtitle1" Style="font-weight: 600; color: #d29922;">enterprise-infrastructure-solutions</MudText>
+                </div>
+                <MudText Typo="Typo.body2" Style="color: #8b949e; line-height: 1.6; margin: 12px 0;">
+                    Custom Monitoring, DMS, and Gov Digital Transformation systems optimized for heavy performance and data integrity.
+                </MudText>
+                <div class="gh-service-meta">
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #d29922;"></div> SQL Server</span>
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #10b981;"></div> Managed Services</span>
+                </div>
+            </div>
 
-                                </MudCard>
-                            </div>
-                           
-                            <div class="container">
-                                <hr />
-                            </div>
+            <!-- UI/UX Systems -->
+            <div class="gh-service-card">
+                <div class="gh-service-header">
+                    <MudIcon Icon="@Icons.Material.Filled.Palette" Style="color: #bc8cff; font-size: 20px;" />
+                    <MudText Typo="Typo.subtitle1" Style="font-weight: 600; color: #bc8cff;">ui-ux-design-implementation</MudText>
+                </div>
+                <MudText Typo="Typo.body2" Style="color: #8b949e; line-height: 1.6; margin: 12px 0;">
+                    Modernizing legacy corporate interfaces with responsive dashboards, high-fidelity components, and intuitive UX flows.
+                </MudText>
+                <div class="gh-service-meta">
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #bc8cff;"></div> CSS/SASS</span>
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #fff;"></div> Dark Mode</span>
+                </div>
+            </div>
 
-                            <div class="container">
-                                <MudGrid>
-                                    <MudItem xs="5">
-                                        <MudPaper Style="width: 200px">
-                                            <MudStepper  Vertical ShowResetButton NonLinear="false">
-                                                <ChildContent>
-                                                    <MudStep Completed="true" Title="For Approval">Approved.</MudStep>
-                                                    <MudStep Title="Inspection Details" SecondaryText="Optional" Skippable="true">An ad group contains one or more ads which target a shared set of keywords.</MudStep>
-                                                    <MudStep Title="Summary">Try out different ad text to see what brings in the most customers, and learn how to enhance your ads using features like ad extensions. If you run into any problems with your ads, find out how to tell if they're running and how to resolve approval issues.</MudStep>
-                                                </ChildContent>
-                                                <CompletedContent>
-                                                    Thank you for wasting your money on clicks!
-                                                </CompletedContent>
-                                            </MudStepper>
-                                        </MudPaper>
-                                    </MudItem>
-                                    <MudItem xs="7">
-                                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-2">xs=6</MudPaper>
-                                    </MudItem>
-                                </MudGrid>
-                              
-                            </div>
-                        </div>
-                  </div>
-                    <div class="container">
-                        <MudText>Story of the day</MudText>
-                        <MudText Typo="Typo.body2">The quick, brown fox jumps over a lazy dog.</MudText>
-                    </div>
-              </div>
-               
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-            </MudCardActions>
-        </MudCard>
+            <!-- API Architecture -->
+            <div class="gh-service-card">
+                <div class="gh-service-header">
+                    <MudIcon Icon="@Icons.Material.Filled.Code" Style="color: #ff7b72; font-size: 20px;" />
+                    <MudText Typo="Typo.subtitle1" Style="font-weight: 600; color: #ff7b72;">api-architecture-design</MudText>
+                </div>
+                <MudText Typo="Typo.body2" Style="color: #8b949e; line-height: 1.6; margin: 12px 0;">
+                    Designing robust RESTful APIs with identity management, secure endpoints, and highly-optimized relational database schemas.
+                </MudText>
+                <div class="gh-service-meta">
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #ff7b72;"></div> REST</span>
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #3b82f6;"></div> OAuth2</span>
+                </div>
+            </div>
+
+            <!-- Consulting -->
+            <div class="gh-service-card">
+                <div class="gh-service-header">
+                    <MudIcon Icon="@Icons.Material.Filled.AutoGraph" Style="color: #3fb950; font-size: 20px;" />
+                    <MudText Typo="Typo.subtitle1" Style="font-weight: 600; color: #3fb950;">consulting-technical-leadership</MudText>
+                </div>
+                <MudText Typo="Typo.body2" Style="color: #8b949e; line-height: 1.6; margin: 12px 0;">
+                    Professional code reviews, architecture audits, and mentorship to ensure scalability and long-term maintainability of systems.
+                </MudText>
+                <div class="gh-service-meta">
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #3fb950;"></div> Mentorship</span>
+                    <span class="gh-meta-item"><div class="gh-lang-dot" style="background: #8b949e;"></div> Architecture</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
- 
+
+<style>
+    .github-services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 16px;
+    }
+
+    .gh-service-card {
+        background: var(--gh-canvas);
+        border: 1px solid var(--gh-border);
+        border-radius: 6px;
+        padding: 16px;
+        transition: border-color 0.2s;
+    }
+
+    .gh-service-card:hover {
+        border-color: #8b949e;
+    }
+
+    .gh-service-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .gh-service-meta {
+        display: flex;
+        gap: 16px;
+        margin-top: 12px;
+    }
+
+    .gh-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        color: #8b949e;
+        font-weight: 500;
+    }
+
+    .gh-lang-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    @@media (max-width: 768px) {
+        .github-services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

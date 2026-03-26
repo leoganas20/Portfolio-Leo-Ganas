@@ -1,19 +1,18 @@
-﻿@inject IJSRuntime JSRuntime
+@inject IJSRuntime JSRuntime
 
-<footer id="contact" class="footer">
+<footer id="contact" class="footer" style="background-color: var(--gh-canvas); border-top: 1px solid var(--gh-border); color: var(--gh-text-muted); padding: 40px 0; text-align: center;">
     <div class="container">
-        <p class="m-0">&copy; @(DateTime.Now.Year) LG Dev Software. All Rights Reserved.</p>
-        <p>Powered by Microsoft Blazor & MudBlazor.</p>
-        <p class="mb-1">Contact me</p>
-        <div class="d-flex justify-content-center">
-            <div class="icon-container d-flex">
-                <img @onclick="@(() => OnRedirect("https://www.linkedin.com/in/leo-ganas-468b50212/"))" src="/images/icons/icons8-linkedin-logo-30.png" width="30" style="object-fit:contain" />
-                <img @onclick="@(() => OnRedirect("https://www.upwork.com/freelancers/~016297b0547fe38cce?mp_source=share"))" src="/images/icons/icons8-upwork-30.png" width="30" style="object-fit:contain" />
-                <img @onclick="@(() => OnRedirect("https://wa.me/+639161452948"))" src="/images/icons/icons8-whatsapp-30.png" width="30" style="object-fit:contain" />
-                <img @onclick="@(() => OnRedirect("https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGKnGfxbxVDpCxhtFWHfPHfvTPqJmWTrtxMmcHFvBthwHQwGKXBSzzVggMvzkNstFBQfBbc"))" src="/images/icons/icons8-gmail-logo-30.png" width="30" style="object-fit:contain" />
+        <div class="d-flex flex-column align-center">
+            <p class="m-0" style="font-size: 14px;">&copy; 2020 LG Dev Software. All Rights Reserved.</p>
+            <p style="font-size: 12px; opacity: 0.7;">Built with .NET Blazor & MudBlazor</p>
+            
+            <div class="icon-container d-flex mt-4">
+                <img @onclick="@(() => OnRedirect("https://www.linkedin.com/in/leo-ganas-468b50212/"))" src="/images/icons/icons8-linkedin-logo-30.png" width="24" style="object-fit:contain; filter: brightness(0) invert(1); opacity: 0.6;" />
+                <img @onclick="@(() => OnRedirect("https://www.upwork.com/freelancers/~016297b0547fe38cce?mp_source=share"))" src="/images/icons/icons8-upwork-30.png" width="24" style="object-fit:contain; filter: brightness(0) invert(1); opacity: 0.6;" />
+                <img @onclick="@(() => OnRedirect("https://wa.me/+639161452948"))" src="/images/icons/icons8-whatsapp-30.png" width="24" style="object-fit:contain; filter: brightness(0) invert(1); opacity: 0.6;" />
+                <img @onclick="@(() => OnRedirect("https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGKnGfxbxVDpCxhtFWHfPHfvTPqJmWTrtxMmcHFvBthwHQwGKXBSzzVggMvzkNstFBQfBbc"))" src="/images/icons/icons8-gmail-logo-30.png" width="24" style="object-fit:contain; filter: brightness(0) invert(1); opacity: 0.6;" />
             </div>
         </div>
-
     </div>
 </footer>
 

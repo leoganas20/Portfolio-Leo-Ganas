@@ -1,68 +1,162 @@
-﻿<section id="portfolio-gallery" class="portfolio-gallery">
+<section id="portfolio-gallery" class="portfolio-gallery" style="padding: 100px 0; background-color: var(--gh-bg);">
     <div class="container">
-        <h2>Experience</h2>
-        <div class="portfolio-items">
-            <MudCard Elevation="3">
-                <MudCardMedia Image="/images/thumbnail-blackfort.jpg" Height="200" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Software Developer</MudText>
-                    <MudText Class="mt-3" Typo="Typo.body2">
-                        <MudIcon Icon="@Icons.Material.Filled.LocationOn" Color="Color.Error" /><MudLink Class="burger-btn" Href="https://www.blackfort.ph/" Target="_blank">Blackfort Consulting, Inc</MudLink>
-                    </MudText>
-                    <div class="px-6">
-                        <MudText Typo="Typo.body2">Software Company</MudText>
-                        <MudText Typo="Typo.body2"><b>June 2023 · Current - Full time · Remote</b></MudText>
-                        <MudText Typo="Typo.body2" Class="mt-3">Infrastructure Monitoring Web & Native Mobile App for large companies.</MudText>
-                        <MudText Typo="Typo.body2">Electronic Document Management System Web Applicaiton.</MudText>
+        <div class="text-center mb-16">
+            <MudText Typo="Typo.h6" Style="color: var(--gh-green-3); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Professional Impact</MudText>
+            <MudText Typo="Typo.h3" Style="font-weight: 800; color: #fff;">Work Experience</MudText>
+        </div>
 
-                    </div>
-                </MudCardContent>
-            </MudCard>
-            <MudCard Elevation="3">
-                <MudCardMedia Image="/images/stagePGMO.jpg" Height="200" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Software Developer</MudText>
-                    <MudText Class="mt-3" Typo="Typo.body2">
-                        <MudLink Class="burger-btn dep-text" Href="https://maps.app.goo.gl/oyzHqAUmNw4woAG3A" Target="_blank">
-                            <MudIcon Icon="@Icons.Material.Filled.LocationOn" Color="Color.Error" /> Provincial Government of Misamis Oriental Philippines.
-                        </MudLink>
-                     </MudText>
-                    <div class="px-6">
-                        <MudText Typo="Typo.body2"><b>May 2021 - June 2023 · 2 yrs 5 mos - Full time</b></MudText>
-                        <MudText Typo="Typo.body2" Class="mt-3">Developed software applications for Local Government such as document transactions and many more.</MudText>
-                    </div>
-                </MudCardContent>
-            </MudCard>
-            <MudCard Elevation="3">
-                <MudCardMedia Image="/images/banner.jpg" Height="200" Style="object-fit: contain" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Software Developer</MudText>
-                    
-                    <MudText Class="mt-3" Typo="Typo.body2">
-                        <MudLink Class="burger-btn dep-text" Href="https://maps.app.goo.gl/oyzHqAUmNw4woAG3A" Target="_blank">
-                            <MudIcon Icon="@Icons.Material.Filled.LocationOn" Color="Color.Error" Style="margin-bottom: 5px;" />Department of Social Welfare and Development.
-                        </MudLink>
-                    </MudText>
-                    <div class="px-6">
-                        <MudText Typo="Typo.body2"><b>Jan 2020 - Dec 2020 · 1 yr - Full time</b></MudText>
-                        <MudText Typo="Typo.body2" Class="mt-3">Developed New Version of Document Management System.</MudText>
-                    </div>
-                </MudCardContent>
-            </MudCard>
-            <MudCard Elevation="3">
-                <MudCardMedia Image="/images/banner.jpg" Height="200" Style="object-fit: contain" />
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Project Team Leader</MudText>
-                    <MudText Class="mt-3" Typo="Typo.body2">
-                        <MudIcon Icon="@Icons.Material.Filled.Business" Color="Color.Default" Style="margin-bottom: 5px;" /><MudLink Class="burger-btn" Href="https://www.svi.com.ph/" Target="_blank">Software Venture International.</MudLink>
-                    </MudText>
-                    <div class="px-6">
-                        <MudText Typo="Typo.body2"><b>Jan 2020 - Aug 2020 · 8 mos - Contract</b></MudText>
-                        <MudText Typo="Typo.body2" Class="mt-3">Team leader for data capture (OCR documents to digital copy) using Document Management System.</MudText>
-                    </div>
-                </MudCardContent>
-            </MudCard>
+    <div class="modern-experience-list">
+        <!-- Blackfort Section -->
+        <div class="exp-row">
+            <div class="exp-logo-area">
+                <img src="blackfort-logo-black.webp" alt="Blackfort" class="large-exp-logo" style="filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px 1px 0 white);" />
+            </div>
+            <div class="exp-info-area">
+                <MudText Typo="Typo.h4" Class="exp-company">Blackfort Consulting</MudText>
+                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Software Engineering & Cloud Solutions</MudText>
+                <MudText Typo="Typo.body1" Class="exp-description">
+                    Leading the technical architecture for diverse enterprise clients as a Full-Stack .NET Developer. Focused on building high-performance 
+                    distributed systems, complex mobile integrations, and real-time monitoring dashboards that bridge the gap 
+                    between physical infrastructure and digital management.
+                </MudText>
+            </div>
+        </div>
 
+        <!-- Provincial Gov Section -->
+        <div class="exp-row reverse">
+            <div class="exp-logo-area">
+                <img src="provincial misamis.png" alt="Provincial Gov" class="large-exp-logo" />
+            </div>
+            <div class="exp-info-area">
+                <MudText Typo="Typo.h4" Class="exp-company">Provincial Gov. of Misamis Oriental</MudText>
+                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Public Sector & Governance</MudText>
+                <MudText Typo="Typo.body1" Class="exp-description">
+                    Spearheaded the digital transformation of government services. Successfully implemented the Electronic 
+                    Leave Application System and various citizen-facing portals that improved administrative efficiency 
+                    across all provincial departments.
+                </MudText>
+            </div>
+        </div>
+        
+        <!-- DSWD Section -->
+        <div class="exp-row">
+            <div class="exp-logo-area">
+                <img src="DSWD-Logo-700x394.png" alt="DSWD" class="large-exp-logo" />
+            </div>
+            <div class="exp-info-area">
+                <MudText Typo="Typo.h4" Class="exp-company">Dept. of Social Welfare & Development</MudText>
+                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Social Services / Government</MudText>
+                <MudText Typo="Typo.body1" Class="exp-description">
+                    Developed high-integrity Document Management Systems at scale. Engineered the underlying OCR and 
+                    indexing engines that allow social workers to instantly retrieve and process citizen records with 
+                    perfect accuracy.
+                </MudText>
+            </div>
+        </div>
+
+        <!-- SVI Section -->
+        <div class="exp-row reverse">
+            <div class="exp-logo-area">
+                <img src="W-SVI Logos_SVI Corporation.avif" alt="SVI" class="large-exp-logo" />
+            </div>
+            <div class="exp-info-area">
+                <MudText Typo="Typo.h4" Class="exp-company">Software Venture International</MudText>
+                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Corporate Software Services</MudText>
+                <MudText Typo="Typo.body1" Class="exp-description">
+                    Pioneered the data capture initiative for large-scale OCR digitization projects. Led a cross-functional team in transforming historical government records into secure, digital assets.
+                </MudText>
+            </div>
         </div>
     </div>
+</div>
 </section>
+
+<style>
+    .modern-experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        padding-top: 60px;
+    }
+
+    .exp-row {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s forwards;
+    }
+
+    .exp-row.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .exp-logo-area {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .large-exp-logo {
+        max-width: 100%;
+        max-height: 200px;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+    }
+
+    .exp-row:hover .large-exp-logo {
+        transform: scale(1.05);
+    }
+
+    .exp-info-area {
+        flex: 1;
+    }
+
+    .exp-company {
+        color: #fff;
+        font-weight: 800 !important;
+        margin-bottom: 8px !important;
+        letter-spacing: -1px;
+    }
+
+    .exp-industry {
+        color: var(--gh-green-4);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 24px !important;
+        display: block;
+    }
+
+    .exp-description {
+        color: var(--gh-text-muted);
+        line-height: 1.8 !important;
+        font-size: 1.1rem !important;
+    }
+
+    @@keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@media (max-width: 992px) {
+        .exp-row, .exp-row.reverse {
+            flex-direction: column;
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .modern-experience-list {
+            gap: 80px;
+        }
+
+        .large-exp-logo {
+            max-height: 120px;
+        }
+    }
+</style>
