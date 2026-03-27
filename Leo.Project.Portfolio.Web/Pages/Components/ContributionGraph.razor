@@ -172,7 +172,8 @@
         margin: 20px 0;
         padding-right: 12px;
         max-width: 100%;
-        overflow: hidden; /* Prevent internal wide graph from pushing page width */
+        overflow-x: auto; /* Allow scrolling instead of clipping */
+        -webkit-overflow-scrolling: touch;
     }
 
     .contribution-main {

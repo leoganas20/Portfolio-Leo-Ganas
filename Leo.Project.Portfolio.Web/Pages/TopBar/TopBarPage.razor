@@ -207,23 +207,27 @@
         color: white;
     }
 
-    /* Mobile Drawer Text Fix */
-    .mud-drawer-content .mud-nav-link, 
-    .mud-drawer-content .mud-nav-link .mud-nav-link-text {
-        color: var(--gh-text) !important;
-        font-weight: 500;
-        font-size: 1rem;
+    /* Mobile Drawer Text Fix - Robust Override */
+    .mud-drawer, 
+    .mud-drawer-content,
+    .mud-drawer .mud-nav-link, 
+    .mud-drawer .mud-nav-link-text,
+    .mud-drawer .mud-nav-link .mud-nav-link-text {
+        color: #e6edf3 !important; /* Force light text for dark drawer */
+        font-weight: 500 !important;
     }
 
-    .mud-drawer-content {
-        background-color: var(--gh-canvas) !important;
+    .mud-drawer-header .mud-text {
+        color: #e6edf3 !important;
     }
 
-    .mud-navmenu.mud-navmenu-dark .mud-nav-link.active:not(.mud-nav-link-disabled){
+    .mud-drawer {
+        background-color: #161b22 !important; /* Force dark background */
+    }
+
+    .mud-navmenu .mud-nav-link.active {
         color: var(--gh-primary) !important;
-        --mud-ripple-color: var(--mud-palette-dark);
-        background-color: var(--mud-palette-dark-hover);
-        font-size: 16px;
+        background-color: rgba(35, 134, 54, 0.1) !important;
     }
     
 </style>
