@@ -54,6 +54,8 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     color: var(--gh-text);
     background-color: var(--gh-bg);
+    overflow-x: hidden; /* Prevent horizontal scroll globally */
+    width: 100%;
 }
 
 #app {
@@ -415,17 +417,15 @@ ul {
     margin-bottom: 40px;
 }
 
-.portfolio-container {
-    background-color: var(--gh-bg);
-}
-
-section {
-    background-color: var(--gh-bg);
-    color: var(--gh-text);
-}
-
 h2, h3, h4, h5, h6 {
     color: var(--gh-text);
+}
+
+.portfolio-container {
+    background-color: var(--gh-bg);
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 p, span, div {
