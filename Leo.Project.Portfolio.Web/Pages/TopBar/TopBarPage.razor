@@ -207,8 +207,20 @@
         color: white;
     }
 
+    /* Mobile Drawer Text Fix */
+    .mud-drawer-content .mud-nav-link, 
+    .mud-drawer-content .mud-nav-link .mud-nav-link-text {
+        color: var(--gh-text) !important;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .mud-drawer-content {
+        background-color: var(--gh-canvas) !important;
+    }
+
     .mud-navmenu.mud-navmenu-dark .mud-nav-link.active:not(.mud-nav-link-disabled){
-        color: #596E79;
+        color: var(--gh-primary) !important;
         --mud-ripple-color: var(--mud-palette-dark);
         background-color: var(--mud-palette-dark-hover);
         font-size: 16px;
