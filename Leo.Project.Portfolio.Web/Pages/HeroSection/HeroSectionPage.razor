@@ -30,12 +30,12 @@
                                 <span class="text-secondary">Malaybalay City, Philippines</span>
                             </div>
                             <div class="metadata-item">
-                                <MudIcon class="text-secondary" Icon="@Icons.Material.Outlined.Email" Size="Size.Small" />
-                                <a class="text-secondary" href="mailto:leoganas.jr@gmail.com">leoganas.jr@gmail.com</a>
+                                <MudIcon class="tx-link text-secondary" Icon="@Icons.Material.Outlined.Email" Size="Size.Small" />
+                                <a class="tx-link text-secondary" href="mailto:leoganas.jr@gmail.com">leoganas.jr@gmail.com</a>
                             </div>
                             <div class="metadata-item">
-                                <MudIcon class="text-secondary" Icon="@Icons.Material.Outlined.Link" Size="Size.Small" />
-                                <a class="text-secondary" href="https://linkedin.com/in/leo-ganas-468b50212/" target="_blank">LinkedIn Profile</a>
+                                <MudIcon class="tx-link text-secondary" Icon="@Icons.Material.Outlined.Link" Size="Size.Small" />
+                                <a class="tx-link text-secondary" href="https://linkedin.com/in/leo-ganas-468b50212/" target="_blank">LinkedIn Profile</a>
                             </div>
                         </div>
 
@@ -160,9 +160,10 @@
         color: var(--gh-text);
         text-decoration: none;
     }
-    .metadata-item a:hover {
-        color: var(--gh-primary);
+    .metadata-item a:hover, .tx-link:hover {
+        color: lime !important;
         text-decoration: underline;
+        cursor: pointer;
     }
     .gh-btn-sidebar {
         display: block;
@@ -180,6 +181,7 @@
     .gh-btn-sidebar:hover {
         background-color: var(--gh-border);
         cursor: pointer;
+       
     }
 
     /* README Section Styles */
@@ -225,6 +227,8 @@
         transition: 0.2s;
         text-decoration: none;
     }
+    
+    
     .gh-btn-primary:hover {
         background-color: var(--gh-primary-hover);
         color: white;
