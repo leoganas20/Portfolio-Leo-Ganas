@@ -204,25 +204,26 @@
         text-align: center;
         transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         border-radius: 50%;
-        color: white;
+        color: var(--gh-text);
     }
 
-    /* Mobile Drawer Text Fix - Robust Override */
+    /* Mobile Drawer Text Fix - Respecting Theme */
     .mud-drawer, 
     .mud-drawer-content,
     .mud-drawer .mud-nav-link, 
     .mud-drawer .mud-nav-link-text,
     .mud-drawer .mud-nav-link .mud-nav-link-text {
-        color: #e6edf3 !important; /* Force light text for dark drawer */
+        color: var(--gh-text) !important;
         font-weight: 500 !important;
     }
 
     .mud-drawer-header .mud-text {
-        color: #e6edf3 !important;
+        color: var(--gh-text) !important;
     }
 
     .mud-drawer {
-        background-color: #161b22 !important; /* Force dark background */
+        background-color: var(--gh-canvas) !important;
+        border-left: 1px solid var(--gh-border) !important;
     }
 
     .mud-navmenu .mud-nav-link.active {
