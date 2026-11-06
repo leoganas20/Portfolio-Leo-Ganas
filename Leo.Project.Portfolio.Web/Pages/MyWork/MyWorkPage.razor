@@ -11,7 +11,13 @@
         <div class="current-work-card">
             <div class="current-work-top">
                 <span class="current-badge"><span class="current-dot"></span>Current &middot; Dec 2025 &ndash; Present</span>
-                <span class="current-companies">KVLR Code &amp; Born Digital &middot; Malta (Remote)</span>
+                <span class="current-companies">
+                    <span class="company-logos">
+                        <img class="company-logo is-square" src="kvlr-logo.png" alt="KVLR Code logo" loading="lazy" />
+                        <img class="company-logo is-square" src="born-digital-logo.png" alt="Born Digital logo" loading="lazy" />
+                    </span>
+                    KVLR Code &amp; Born Digital &middot; Malta (Remote)
+                </span>
             </div>
 
             <h3 class="current-title">Licensing Platform Modernization</h3>
@@ -47,7 +53,12 @@
         <div class="current-work-card project-text-card">
             <div class="current-work-top">
                 <span class="current-badge is-past">Jun 2023 &ndash; Dec 2025</span>
-                <span class="current-companies">Blackfort PH &middot; Responsive web app &amp; native mobile app</span>
+                <span class="current-companies">
+                    <span class="company-logos">
+                        <img class="company-logo is-wordmark" src="blackfort-logo-black.webp" alt="Blackfort logo" loading="lazy" />
+                    </span>
+                    Blackfort PH &middot; Responsive web app &amp; native mobile app
+                </span>
             </div>
 
             <h3 class="current-title">Infrastructure Monitoring &amp; Inspection Platform</h3>
@@ -82,7 +93,12 @@
         <div class="current-work-card project-text-card">
             <div class="current-work-top">
                 <span class="current-badge is-past">May 2021 &ndash; Jun 2023</span>
-                <span class="current-companies">Provincial Government of Misamis Oriental &middot; Progressive Web App</span>
+                <span class="current-companies">
+                    <span class="company-logos">
+                        <img class="company-logo is-seal" src="provincial misamis.png" alt="Provincial Government of Misamis Oriental logo" loading="lazy" />
+                    </span>
+                    Provincial Government of Misamis Oriental &middot; Progressive Web App
+                </span>
             </div>
 
             <h3 class="current-title">Electronic Leave Application System</h3>
@@ -117,7 +133,12 @@
         <div class="current-work-card project-text-card">
             <div class="current-work-top">
                 <span class="current-badge is-past">Jan 2020 &ndash; Dec 2020</span>
-                <span class="current-companies">Department of Social Welfare and Development &middot; Full-stack .NET &amp; OCR</span>
+                <span class="current-companies">
+                    <span class="company-logos">
+                        <img class="company-logo is-wordmark" src="DSWD-Logo-700x394.png" alt="DSWD logo" loading="lazy" />
+                    </span>
+                    Department of Social Welfare and Development &middot; Full-stack .NET &amp; OCR
+                </span>
             </div>
 
             <h3 class="current-title">Document Management System</h3>
@@ -460,7 +481,46 @@
         color: var(--gh-text);
     }
 
+    .company-logos {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .company-logo {
+        display: block;
+        object-fit: contain;
+    }
+
+    .company-logo.is-square {
+        width: 26px;
+        height: 26px;
+        border-radius: 7px;
+        object-fit: cover;
+        box-shadow: 0 0 0 1px var(--gh-border);
+    }
+
+    .company-logo.is-wordmark,
+    .company-logo.is-seal {
+        box-sizing: border-box;
+        height: 30px;
+        width: auto;
+        max-width: 120px;
+        padding: 4px 8px;
+        background: #ffffff;
+        border-radius: 7px;
+        box-shadow: 0 0 0 1px var(--gh-border);
+    }
+
+    .company-logo.is-seal {
+        padding: 2px 6px;
+    }
+
     .current-companies {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
         font-size: 14px;
         color: var(--gh-text-muted);
     }
