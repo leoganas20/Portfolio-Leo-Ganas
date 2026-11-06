@@ -44,606 +44,105 @@
             </div>
         </div>
 
-        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 56px;">
-            <MudCardContent Class="d-flex justify-content-center">
-               <MudGrid Class="element-grid" Style="width:100%">
-                    <MudItem xs="12" sm="12" lg="6" md="12"  Class="summar-project">
-                        <div class="row">
-                            <div class="col-12">
-                                <MudText Typo="Typo.h3" Style="font-weight: bolder; font-size: 1.25rem;">Multi Platform Development (Blackfort PH)</MudText>
-                                <MudText Typo="Typo.h4" Style="font-weight: normal; color: var(--gh-primary); font-size: 1.1rem;">Responsive Web App & Native Mobile App</MudText>
-                                <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                    With 6+ years of experience in Blazor and .NET, I specialized in developing infrastructure monitoring and inspection systems. My focus was on capturing real-time data, including photos, GPS geolocation, and offline support, enabling seamless integration between mobile and web platforms.
-                                </MudText>
-                            </div>
-                            <div class="col-12 d-flex justify-content-between mt-5 gap-5">
+        <div class="current-work-card project-text-card">
+            <div class="current-work-top">
+                <span class="current-badge is-past">Jun 2023 &ndash; Dec 2025</span>
+                <span class="current-companies">Blackfort PH &middot; Responsive web app &amp; native mobile app</span>
+            </div>
 
-                                <MudGrid>
-                                    <MudItem xs="12" sm="12" lg="6" md="6">
-                                        <div class="web-notes">
-                                            <MudIcon Icon="@Icons.Material.Filled.Web" Size="Size.Large" Color="Color.Success" />
-                                            <MudText Typo="Typo.h6">Web Development</MudText>
-                                            <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                                I’ve built intuitive dashboards for web-based infrastructure management, allowing administrators to monitor inspection data, track site locations, and generate reports.
-                                            </MudText>
-                                        </div>
-                                    </MudItem>
-                                    <MudItem xs="12" sm="12" lg="6" md="6">
-                                        <div class="mobile-notes">
-                                            <MudIcon Icon="@Icons.Material.Filled.Smartphone" Size="Size.Large" Color="Color.Success" />
-                                            <MudText Typo="Typo.h6">Mobile Development</MudText>
-                                            <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                                I develop mobile solutions for site inspections, enabling field agents to capture geolocated photos and data offline. Once online, the data is automatically synced to the server for processing.
-                                            </MudText>
-                                        </div>
-                                    </MudItem>
-                                </MudGrid>
-                            </div>
-                        </div>
-                    </MudItem>
-                    <MudItem Class="project" xs="12" sm="12" lg="6"  md="12" Style="position: relative;">
-                        <div class="web-section" style="background: #020617; display: flex; flex-direction: column; align-items: stretch;">
-                            <div class="browser-chrome">
-                                <div class="browser-dots"><span></span><span></span><span></span></div>
-                                <div class="browser-address">
-                                    <MudIcon Icon="@Icons.Material.Filled.Lock" Size="Size.Small" Style="color: #8b949e; font-size: 12px;" />
-                                    ims.blackfort.ph
-                                </div>
-                            </div>
-                            <div style="flex: 1; min-height: 0; display: flex; flex-direction: row; align-items: stretch;">
-                            <!-- Mockup Sidebar -->
-                            <div style="width: 50px; background: #0f172a; border-right: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; align-items: center; padding-top: 20px; gap: 20px;">
-                                <MudIcon Icon="@Icons.Material.Filled.Dashboard" Size="Size.Small" Style="color: #7F56D9;"/>
-                                <MudIcon Icon="@Icons.Material.Filled.BarChart" Size="Size.Small" Style="color: #64748b; font-size: 16px;"/>
-                                <MudIcon Icon="@Icons.Material.Filled.LocationOn" Size="Size.Small" Style="color: #64748b; font-size: 16px;"/>
-                                <MudIcon Icon="@Icons.Material.Filled.History" Size="Size.Small" Style="color: #64748b; font-size: 16px;"/>
-                            </div>
+            <h3 class="current-title">Infrastructure Monitoring &amp; Inspection Platform</h3>
+            <p class="current-lead">
+                Developed infrastructure monitoring and inspection systems that capture real-time field data &mdash; photos,
+                GPS geolocation and offline support &mdash; with seamless integration between the mobile app and the web platform.
+            </p>
 
-                            <div style="flex-grow:1; display: flex; flex-direction: column; overflow-y: auto;">
-                                <!-- IMS System Header -->
-                                <div style="background: #0f172a; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;">
-                                <div class="d-flex align-center gap-3">
-                                    <div style="width:10px; height:10px; border-radius:50%; background:#10b981; box-shadow: 0 0 10px #10b981;"></div>
-                                    <MudText Typo="Typo.caption" Style="color: #fff; font-weight: 800; letter-spacing: 1px;">IMS DASHBOARD • V5.1 LIVE</MudText>
-                                </div>
-                                <div class="d-flex gap-4">
-                                    <MudText Typo="Typo.caption" Style="color: #64748b;">GPS: <span style="color: #10b981;">CONNECTED</span></MudText>
-                                    <MudText Typo="Typo.caption" Style="color: #64748b;">DATA: <span style="color: #3b82f6;">SYNCED</span></MudText>
-                                </div>
-                            </div>
-                            
-                            <div class="px-6 py-4">
-                                <div class="d-flex justify-content-between align-center mb-6">
-                                    <MudText Typo="Typo.h6" Style="color: #fff; font-weight: 700;">Infrastructure Overview</MudText>
-                                    <MudButton Variant="Variant.Outlined" Color="Color.Inherit" Size="Size.Small" StartIcon="@Icons.Material.Filled.FilterList" Style="color: #64748b; border-color: rgba(255,255,255,0.1);">Filters</MudButton>
-                                </div>
+            <div class="current-highlights">
+                <div class="current-highlight">
+                    <MudIcon Icon="@Icons.Material.Filled.Web" Class="current-highlight-icon" />
+                    <h4>Web dashboards</h4>
+                    <p>Dashboards for infrastructure management that let administrators monitor inspection data, track site locations and generate reports.</p>
+                </div>
+                <div class="current-highlight">
+                    <MudIcon Icon="@Icons.Material.Filled.Smartphone" Class="current-highlight-icon" />
+                    <h4>Mobile field app</h4>
+                    <p>Site-inspection app that lets field agents capture geolocated photos and data offline.</p>
+                </div>
+                <div class="current-highlight">
+                    <MudIcon Icon="@Icons.Material.Filled.Sync" Class="current-highlight-icon" />
+                    <h4>Offline-first sync</h4>
+                    <p>Data captured offline is synced to the server automatically once the device is back online.</p>
+                </div>
+            </div>
 
-                                <MudGrid Spacing="3" Class="mb-6">
-                                    <MudItem xs="4">
-                                        <div class="glass-card p-3">
-                                            <MudText Typo="Typo.caption" Style="color: #64748b;">TOTAL ASSETS</MudText>
-                                            <div class="d-flex align-center gap-2 mt-1">
-                                                <MudText Typo="Typo.h5" Style="color: #fff; font-weight: 700;">12,339</MudText>
-                                                <MudIcon Icon="@Icons.Material.Filled.TrendingUp" Size="Size.Small" Style="color: #10b981;"/>
-                                            </div>
-                                        </div>
-                                    </MudItem>
-                                    <MudItem xs="4">
-                                        <div class="glass-card p-3">
-                                            <MudText Typo="Typo.caption" Style="color: #64748b;">ACTIVE REPAIRS</MudText>
-                                            <div class="d-flex align-center gap-2 mt-1">
-                                                <MudText Typo="Typo.h5" Style="color: #fff; font-weight: 700;">82</MudText>
-                                                <MudText Typo="Typo.caption" Style="color: #ef4444;">-5.2%</MudText>
-                                            </div>
-                                        </div>
-                                    </MudItem>
-                                    <MudItem xs="4">
-                                        <div class="glass-card p-3" style="border-left: 4px solid #10b981;">
-                                            <MudText Typo="Typo.caption" Style="color: #64748b;">SYSTEM UPTIME</MudText>
-                                            <div class="d-flex align-center gap-2 mt-1">
-                                                <MudText Typo="Typo.h5" Style="color: #fff; font-weight: 700;">99.9%</MudText>
-                                                <MudText Typo="Typo.caption" Style="color: #10b981;">Perfect</MudText>
-                                            </div>
-                                        </div>
-                                    </MudItem>
-                                </MudGrid>
+            <div class="current-stack">
+                <span>Blazor WebAssembly</span><span>.NET MAUI</span><span>REST APIs</span><span>Telerik UI</span><span>MudBlazor</span><span>GPS &amp; offline</span>
+            </div>
+        </div>
 
-                                <MudGrid Spacing="3" Class="mb-6">
-                                    <MudItem xs="12">
-                                        <div class="glass-card p-4">
-                                            <div class="d-flex justify-content-between align-center mb-4">
-                                                <MudText Typo="Typo.caption" Style="color: #fff; font-weight: 800; letter-spacing: 0.5px;">ASSET DISTRIBUTION BREAKDOWN</MudText>
-                                                <MudIcon Icon="@Icons.Material.Filled.PieChart" Size="Size.Small" Style="color: #64748b;"/>
-                                            </div>
-                                            <div class="d-flex flex-wrap gap-4">
-                                                @for (int i = 0; i < labels.Length; i++)
-                                                {
-                                                    var label = labels[i];
-                                                    var value = data[i];
-                                                    <div class="d-flex align-center gap-3 py-2 px-3" style="background: rgba(255,255,255,0.03); flex: 1; min-width: 140px; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px;">
-                                                        <div style="width: 8px; height: 8px; border-radius: 2px; background: @(i switch { 0 => "#3b82f6", 1 => "#10b981", 2 => "#f59e0b", _ => "#ef4444" });"></div>
-                                                        <div class="flex-grow-1">
-                                                            <MudText Typo="Typo.caption" Style="color: #94a3b8; font-weight: 600; display: block;">@label.ToUpper()</MudText>
-                                                            <MudText Typo="Typo.body2" Style="color: #fff; font-weight: 700;">@value.ToString() Units</MudText>
-                                                        </div>
-                                                    </div>
-                                                }
-                                            </div>
-                                        </div>
-                                    </MudItem>
-                                </MudGrid>
+        <div class="current-work-card project-text-card">
+            <div class="current-work-top">
+                <span class="current-badge is-past">May 2021 &ndash; Jun 2023</span>
+                <span class="current-companies">Provincial Government of Misamis Oriental &middot; Progressive Web App</span>
+            </div>
 
-                                @* <div class="glass-card overflow-hidden"> *@
-                                @*     <div class="p-3 border-bottom d-flex align-center justify-content-between" style="background: rgba(15, 23, 42, 0.6); border-bottom: 1px solid rgba(255,255,255,0.1) !important;"> *@
-                                @*         <MudText Typo="Typo.caption" Style="color: #fff; font-weight: 800; letter-spacing: 0.5px;">RECENT FIELD INSPECTIONS</MudText> *@
-                                @*         <MudIcon Icon="@Icons.Material.Filled.History" Size="Size.Small" Style="color: #64748b;"/> *@
-                                @*     </div> *@
-                                @*     <MudDataGrid Height="160px" Items="@InspectionRecords.Take(3)" Elevation="0" Style="background: transparent;" Dense="true" Bordered="false"> *@
-                                @*         <Columns> *@
-                                @*             <PropertyColumn Property="x => x.AssetType" Title="ASSET TYPE"  *@
-                                @*                             HeaderStyle="color: #64748b; font-weight: 700; font-size: 9px; letter-spacing: 1px; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05);" *@
-                                @*                             Style="color: #fff; font-weight: 600; font-size: 11px; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.03);" /> *@
-                                @*              *@
-                                @*             <PropertyColumn Property="x => x.ConditionRating" Title="RATING"  *@
-                                @*                             HeaderStyle="color: #64748b; font-weight: 700; font-size: 9px; letter-spacing: 1px; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05);" *@
-                                @*                             Style="padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.03);"> *@
-                                @*                 <CellTemplate> *@
-                                @*                     <MudRating SelectedValue="@context.Item.ConditionRating" Size="Size.Small" ReadOnly="true" Color="Color.Warning"/> *@
-                                @*                 </CellTemplate> *@
-                                @*             </PropertyColumn> *@
-                                @* *@
-                                @*             <PropertyColumn Property="x => x.Status" Title="STATUS"  *@
-                                @*                             HeaderStyle="color: #64748b; font-weight: 700; font-size: 9px; letter-spacing: 1px; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05);" *@
-                                @*                             Style="padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.03);"> *@
-                                @*                 <CellTemplate> *@
-                                @*                     @if (context.Item.Status == "Operational") *@
-                                @*                     { *@
-                                @*                         <div style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 2px 8px; border-radius: 4px; font-size: 9px; font-weight: 700; display: inline-block;">OPERATIONAL</div> *@
-                                @*                     } *@
-                                @*                     else if (context.Item.Status == "Critical") *@
-                                @*                     { *@
-                                @*                         <div style="background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 2px 8px; border-radius: 4px; font-size: 9px; font-weight: 700; display: inline-block;">CRITICAL</div> *@
-                                @*                     } *@
-                                @*                     else *@
-                                @*                     { *@
-                                @*                         <div style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 2px 8px; border-radius: 4px; font-size: 9px; font-weight: 700; display: inline-block;">MAINTENANCE</div> *@
-                                @*                     } *@
-                                @*                 </CellTemplate> *@
-                                @*             </PropertyColumn> *@
-                                @* *@
-                                @*             <PropertyColumn Property="x => x.InspectionDate" Title="DATE"  *@
-                                @*                             HeaderStyle="color: #64748b; font-weight: 700; font-size: 9px; letter-spacing: 1px; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05);" *@
-                                @*                             Style="color: #94a3b8; font-size: 11px; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.03);"> *@
-                                @*                 <CellTemplate> *@
-                                @*                     @context.Item.InspectionDate.ToString("MMM dd, yyyy") *@
-                                @*                 </CellTemplate> *@
-                                @*             </PropertyColumn> *@
-                                @*         </Columns> *@
-                                @*     </MudDataGrid> *@
-                                @* </div> *@
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="mobile-container">
-                                <div class="mobile-section">
-                                    <div class="top-section d-flex justify-content-between align-content-center">
-                                        <p style="font-size:14px; margin-top: 4px; margin-bottom: 0px; color: white">@DateTime.Now.ToString("hh:mm tt")</p>
-                                        <div class="network-section">
-                                            <!-- First SVG -->
-                                            <svg style="width:18px" class="mud-icon-root mud-svg-icon mud-icon-size-medium" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="img">
-                                                <path d="M0 0h24v24H0V0z" fill="none"></path>
-                                                <path d="M18.5 4c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-13c0-.83.67-1.5 1.5-1.5zm-12 10c.83 0 1.5.67 1.5 1.5v3c0 .83-.67 1.5-1.5 1.5S5 19.33 5 18.5v-3c0-.83.67-1.5 1.5-1.5zm6-5c.83 0 1.5.67 1.5 1.5v8c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-8c0-.83.67-1.5 1.5-1.5z" fill="#ffffff"></path>
-                                            </svg>
+            <h3 class="current-title">Electronic Leave Application System</h3>
+            <p class="current-lead">
+                Designed and deployed a digital leave application system that replaced manual, paper-based processes,
+                with automated approval workflows, real-time tracking and employee training modules.
+            </p>
 
-                                            <!-- Second SVG -->
-                                            <svg style="width:18px" class="mud-icon-root mud-svg-icon mud-icon-size-medium" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="img">
-                                                <path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"></path>
-                                                <path d="M2.06 10.06c.51.51 1.32.56 1.87.1 4.67-3.84 11.45-3.84 16.13-.01.56.46 1.38.42 1.89-.09.59-.59.55-1.57-.1-2.1-5.71-4.67-13.97-4.67-19.69 0-.65.52-.7 1.5-.1 2.1zm7.76 7.76l1.47 1.47c.39.39 1.02.39 1.41 0l1.47-1.47c.47-.47.37-1.28-.23-1.59-1.22-.63-2.68-.63-3.91 0-.57.31-.68 1.12-.21 1.59zm-3.73-3.73c.49.49 1.26.54 1.83.13 2.44-1.73 5.72-1.73 8.16 0 .57.4 1.34.36 1.83-.13l.01-.01c.6-.6.56-1.62-.13-2.11-3.44-2.49-8.13-2.49-11.58 0-.69.5-.73 1.51-.12 2.12z" fill="#ffffff"></path>
-                                            </svg>
+            <div class="current-highlights">
+                <div class="current-highlight">
+                    <MudIcon Icon="@Icons.Material.Filled.InstallMobile" Class="current-highlight-icon" />
+                    <h4>PWA features</h4>
+                    <p>Fast and accessible on any device, with offline support so employees can draft applications without a connection.</p>
+                </div>
+                <div class="current-highlight">
+                    <MudIcon Icon="@Icons.Material.Filled.Rule" Class="current-highlight-icon" />
+                    <h4>Automated workflows</h4>
+                    <p>Streamlined approvals from department heads to HR, cutting processing time and paper waste.</p>
+                </div>
+                <div class="current-highlight">
+                    <MudIcon Icon="@Icons.Material.Filled.School" Class="current-highlight-icon" />
+                    <h4>Rollout &amp; training</h4>
+                    <p>Maintained and enhanced the system after deployment and ran employee training sessions.</p>
+                </div>
+            </div>
 
-                                            <!-- Third SVG -->
-                                            <svg style="width:18px" class="mud-icon-root mud-svg-icon mud-icon-size-medium" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="img">
-                                                <path d="M0 0h24v24H0V0z" fill="none"></path>
-                                                <path d="M15.67 4H14V3c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1v1H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.34 22h7.32c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z" fill="#ffffff"></path>
-                                            </svg>
+            <div class="current-stack">
+                <span>Blazor WebAssembly</span><span>PWA</span><span>Offline support</span><span>Approval workflows</span>
+            </div>
+        </div>
 
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <MudAppBar Style="background-color: #131a1c; height: 50px;" Fixed="false" Dense="true" Elevation="0">
-                                            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" Size="Size.Small" />
-                                            <MudSpacer />
-                                            <MudAvatar Size="Size.Small" Style="background: var(--gh-green-4);">LG</MudAvatar>
-                                        </MudAppBar>
-                                        <MudMainContent Class="pt-2 px-4">
-                                            <div class="glass-card p-3 mb-4" style="background: linear-gradient(135deg, #1a1721, #1a1e21);">
-                                                <MudText Typo="Typo.caption" Style="color: rgba(255,255,255,0.7);">HI INSPECTOR</MudText>
-                                                <MudText Typo="Typo.h6" Style="color: #fff; font-weight: 700;">Remaining Tasks</MudText>
-                                                <div class="d-flex align-end gap-2 mt-1">
-                                                    <MudText Typo="Typo.h4" Style="color: #fff; font-weight: 800;">14</MudText>
-                                                    <MudText Typo="Typo.caption" Style="color: #f59e0b; margin-bottom: 6px;">Due this week</MudText>
-                                                </div>
-                                            </div>
+        <div class="current-work-card project-text-card">
+            <div class="current-work-top">
+                <span class="current-badge is-past">Jan 2020 &ndash; Dec 2020</span>
+                <span class="current-companies">Department of Social Welfare and Development &middot; Full-stack .NET &amp; OCR</span>
+            </div>
 
-                                            <MudText Typo="Typo.caption" Style="color: #64748b; font-weight: 700;" Class="mb-2 d-block">FLAGGED SITE</MudText>
-                                            <div class="glass-card p-3">
-                                                <div class="d-flex justify-content-between align-center mb-2">
-                                                    <MudText Typo="Typo.caption" Style="color: #fff; font-weight: 700;">Building #EB23NS</MudText>
-                                                    <MudIcon Icon="@Icons.Material.Filled.EditNote" Size="Size.Small" Style="color: #64748b;" />
-                                                </div>
-                                                <MudRating SelectedValue="2" Size="Size.Small" Color="Color.Warning" ReadOnly="true" />
-                                                <MudText Typo="Typo.caption" Class="mt-2 d-block" Style="color: #94a3b8;">Infrastructure needs daily updates for liquidation purposes.</MudText>
-                                                <div style="border-top: 1px solid rgba(255,255,255,0.08); margin: 12px 0;"></div>
-                                                <MudText Typo="Typo.caption" Style="color: #64748b; font-weight: 600;" Class="mb-2 d-block">PROPERTY CONDITION</MudText>
-                                                <div class="d-flex flex-wrap gap-2">
-                                                    <div class="status-pill approved">Good</div>
-                                                    <div class="status-pill pending">Minor repair</div>
-                                                </div>
-                                            </div>
-                                        </MudMainContent>
-                                    </div>
-                                </div>
-                            </div>
+            <h3 class="current-title">Document Management System</h3>
+            <p class="current-lead">
+                Developed and enhanced a Document Management System for document tracking and storage, integrating OCR
+                to digitize physical documents and make them searchable and accessible.
+            </p>
 
-                    </MudItem>
-               </MudGrid>
-            </MudCardContent>
-        </MudCard>
+            <div class="current-highlights">
+                <div class="current-highlight">
+                    <MudIcon Icon="@Icons.Material.Filled.DocumentScanner" Class="current-highlight-icon" />
+                    <h4>OCR digitization</h4>
+                    <p>Automatic text extraction from scanned documents, enabling full-text search across thousands of records.</p>
+                </div>
+                <div class="current-highlight">
+                    <MudIcon Icon="@Icons.Material.Filled.Search" Class="current-highlight-icon" />
+                    <h4>Efficient archiving</h4>
+                    <p>Structured categorization and indexing that greatly improved document retrieval time for government staff.</p>
+                </div>
+            </div>
 
-        <!-- Electronic Leave Application System (Provincial Government) -->
-        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 56px;">
-            <MudCardContent Class="d-flex justify-content-center">
-                <MudGrid Class="element-grid" Style="width:100%">
-                    <MudItem xs="12" sm="12" lg="6" md="12" Class="summar-project">
-                        <div class="row">
-                            <div class="col-12">
-                                <MudText Typo="Typo.h3" Style="font-weight: bolder; font-size: 1.25rem;">Electronic Leave Application System (Provincial Government)</MudText>
-                                <MudText Typo="Typo.h4" Style="font-weight: normal; color: var(--gh-primary); font-size: 1.1rem;">Progressive Web App (PWA) using Blazor WebAssembly</MudText>
-                                <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                    Designed and deployed a digital leave application system, replacing manual paper-based processes. The system features automated approval workflows, real-time tracking, and employee training modules.
-                                </MudText>
-                            </div>
-                            <div class="col-12 d-flex justify-content-between mt-5 gap-5">
-                                <MudGrid>
-                                    <MudItem xs="12" sm="12" lg="6" md="6">
-                                        <div class="web-notes">
-                                            <MudIcon Icon="@Icons.Material.Filled.Assignment" Size="Size.Large" Color="Color.Success" />
-                                            <MudText Typo="Typo.h6">PWA Features</MudText>
-                                            <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                                Fast, reliable, and accessible on any device. Offline support allows employees to draft applications even without an internet connection.
-                                            </MudText>
-                                        </div>
-                                    </MudItem>
-                                    <MudItem xs="12" sm="12" lg="6" md="6">
-                                        <div class="mobile-notes">
-                                            <MudIcon Icon="@Icons.Material.Filled.Rule" Size="Size.Large" Color="Color.Success" />
-                                            <MudText Typo="Typo.h6">Automated Workflows</MudText>
-                                            <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                                Streamlined approval process from department heads to HR, significantly reducing processing time and paper waste.
-                                            </MudText>
-                                        </div>
-                                    </MudItem>
-                                </MudGrid>
-                            </div>
-                        </div>
-                    </MudItem>
-                    <MudItem Class="project" xs="12" sm="12" lg="6" md="12" Style="position: relative;">
-                        <div class="web-section leave-section glass-container">
-                            <div class="browser-chrome">
-                                <div class="browser-dots"><span></span><span></span><span></span></div>
-                                <div class="browser-address">
-                                    <MudIcon Icon="@Icons.Material.Filled.Lock" Size="Size.Small" Style="color: #8b949e; font-size: 12px;" />
-                                    leave.misamisoriental.gov.ph
-                                </div>
-                            </div>
-                            <div class="mockup-body">
-                            <!-- Sidebar -->
-                            <div class="mockup-sidebar">
-                                <div class="sidebar-item active"><MudIcon Icon="@Icons.Material.Filled.Dashboard" Size="Size.Small" /></div>
-                                <div class="sidebar-item"><MudIcon Icon="@Icons.Material.Filled.EventAvailable" Size="Size.Small" /></div>
-                                <div class="sidebar-item"><MudIcon Icon="@Icons.Material.Filled.History" Size="Size.Small" /></div>
-                                <div class="sidebar-item"><MudIcon Icon="@Icons.Material.Filled.Settings" Size="Size.Small" /></div>
-                            </div>
-
-                            <!-- Main Content Area -->
-                            <div class="mockup-content">
-                                <div class="mockup-header glass-header">
-                                    <MudText Typo="Typo.body2" Style="font-weight: 700; color: #fff;">Employee Leave Portal</MudText>
-                                    <MudSpacer />
-                                    <div class="user-profile">
-                                        <MudAvatar Size="Size.Small" Style="height:24px; width:24px;">LG</MudAvatar>
-                                    </div>
-                                </div>
-                                
-                                <div class="px-4 mt-4">
-                                    <MudGrid Spacing="2">
-                                        <MudItem xs="12" sm="12" md="7">
-                                            <div class="glass-card p-3 h-100">
-                                                <MudText Typo="Typo.caption" Style="color: #94a3b8; font-weight: 600;">AVAILABLE BALANCE</MudText>
-                                                <div class="d-flex align-end gap-2 mt-1">
-                                                    <MudText Typo="Typo.h5" Style="color: #fff; font-weight: 700;">14.5 Days</MudText>
-                                                    <MudText Typo="Typo.caption" Style="color: #10b981; margin-bottom: 4px;">+2.5 this month</MudText>
-                                                </div>
-                                                <div class="mt-4">
-                                                    <div class="d-flex justify-content-between mb-1">
-                                                        <MudText Typo="Typo.caption" Style="color: #94a3b8;">Vacation</MudText>
-                                                        <MudText Typo="Typo.caption" Style="color: #fff;">8/10</MudText>
-                                                    </div>
-                                                    <MudProgressLinear Color="Color.Primary" Value="80" Size="Size.Small" Class="rounded-pill" />
-                                                </div>
-                                            </div>
-                                        </MudItem>
-                                        <MudItem xs="12" sm="12" md="5">
-                                            <div class="glass-card p-3 h-100 d-flex flex-column align-center justify-center">
-                                                <MudChart ChartType="ChartType.Donut" InputData="@(new double[] { 12, 2 })" InputLabels="@(new string[] { "Used", "Remaining" })" 
-                                                          Width="65px" Height="65px" LegendPosition="Position.Bottom" 
-                                                          ChartOptions="@(new ChartOptions { ChartPalette = new string[] { "#238636", "#1e293b" } })" />
-                                                <MudText Typo="Typo.caption" Class="mt-2" Style="color: #fff; font-weight: 600;">LEAVE USAGE</MudText>
-                                            </div>
-                                        </MudItem>
-                                        <MudItem xs="12">
-                                            <div class="glass-card p-3 mt-1">
-                                                <MudText Typo="Typo.caption" Class="mb-3 d-block" Style="color: #94a3b8; font-weight: 600;">RECENT REQUESTS</MudText>
-                                                <MudTable Items="@LeaveRecords.Take(2)" Dense="true" Elevation="0" Style="background: transparent;">
-                                                    <HeaderContent>
-                                                        <MudTh Style="color: #64748b; font-size: 10px; border-bottom: 1px solid #334155;">TYPE</MudTh>
-                                                        <MudTh Style="color: #64748b; font-size: 10px; border-bottom: 1px solid #334155;">DATES</MudTh>
-                                                        <MudTh Style="color: #64748b; font-size: 10px; border-bottom: 1px solid #334155;">STATUS</MudTh>
-                                                    </HeaderContent>
-                                                    <RowTemplate>
-                                                        <MudTd Style="font-size: 10px; color: #e2e8f0; border-bottom: 1px solid #1e293b;">@context.LeaveType</MudTd>
-                                                        <MudTd Style="font-size: 10px; color: #94a3b8; border-bottom: 1px solid #1e293b;">@context.StartDate.ToString("MMM dd")</MudTd>
-                                                        <MudTd Style="border-bottom: 1px solid #1e293b;">
-                                                            <div class="status-pill @(context.Status.ToLower())">@context.Status</div>
-                                                        </MudTd>
-                                                    </RowTemplate>
-                                                </MudTable>
-                                            </div>
-                                        </MudItem>
-                                    </MudGrid>
-                                </div>
-                            </div>
-                            </div>
-
-                        </div>
-                        <div class="mobile-container">
-                                <div class="mobile-section">
-                                    <div class="top-section d-flex justify-content-between align-content-center">
-                                        <p style="font-size:14px; margin-top: 4px; margin-bottom: 0px; color: white">@DateTime.Now.ToString("hh:mm tt")</p>
-                                        <div class="network-section">
-                                            <svg style="width:18px" viewBox="0 0 24 24"><path d="M18.5 4c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-13c0-.83.67-1.5 1.5-1.5zm-12 10c.83 0 1.5.67 1.5 1.5v3c0 .83-.67 1.5-1.5 1.5S5 19.33 5 18.5v-3c0-.83.67-1.5 1.5-1.5zm6-5c.83 0 1.5.67 1.5 1.5v8c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-8c0-.83.67-1.5 1.5-1.5z" fill="#ffffff"></path></svg>
-                                            <svg style="width:18px" viewBox="0 0 24 24"><path d="M2.06 10.06c.51.51 1.32.56 1.87.1 4.67-3.84 11.45-3.84 16.13-.01.56.46 1.38.42 1.89-.09.59-.59.55-1.57-.1-2.1-5.71-4.67-13.97-4.67-19.69 0-.65.52-.7 1.5-.1 2.1z" fill="#ffffff"></path></svg>
-                                            <svg style="width:18px" viewBox="0 0 24 24"><path d="M15.67 4H14V3c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1v1H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.34 22h7.32c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z" fill="#ffffff"></path></svg>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <MudAppBar Style="background-color: #131a1c; height: 50px;" Fixed="false" Dense="true" Elevation="0">
-                                            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" Size="Size.Small" />
-                                            <MudSpacer />
-                                            <MudAvatar Size="Size.Small" Style="background: var(--gh-green-4);">LG</MudAvatar>
-                                        </MudAppBar>
-                                        <MudMainContent Class="pt-2 px-4">
-                                                <div class="glass-card p-3 mb-4" style="background: linear-gradient(135deg, #1a1721, #1a1e21);">
-                                                <MudText Typo="Typo.caption" Style="color: rgba(255,255,255,0.7);">WELCOME BACK</MudText>
-                                                <MudText Typo="Typo.h6" Style="color: #fff; font-weight: 700;">Leo Ganas</MudText>
-                                                <div class="mt-4">
-                                                    <MudText Typo="Typo.caption" Style="color: rgba(255,255,255,0.7);">LEAVE BALANCE</MudText>
-                                                    <MudText Typo="Typo.h5" Style="color: #fff; font-weight: 800;">14.5 Days</MudText>
-                                                </div>
-                                            </div>
-                                            
-                                            <MudButton Variant="Variant.Filled" Color="Color.Success" FullWidth="true" Class="rounded-pill py-2 mb-4" Style="background: #238636;">
-                                                Apply New Leave
-                                            </MudButton>
-
-                                            <MudText Typo="Typo.caption" Style="color: #64748b; font-weight: 700;" Class="mb-2 d-block">RECENT ACTIVITY</MudText>
-                                            @foreach(var leave in LeaveRecords.Take(2))
-                                            {
-                                                <div class="glass-card p-3 mb-2 d-flex align-center justify-content-between" style="background: rgba(30, 41, 59, 0.5);">
-                                                    <div>
-                                                        <MudText Typo="Typo.caption" Style="color: #fff; font-weight: 600;" Class="d-block">@leave.LeaveType</MudText>
-                                                        <MudText Typo="Typo.caption" Style="color: #64748b;">@leave.StartDate.ToString("MMM dd")</MudText>
-                                                    </div>
-                                                    <div class="status-pill @(leave.Status.ToLower())" style="font-size: 8px;">@leave.Status</div>
-                                                </div>
-                                            }
-                                        </MudMainContent>
-                                    </div>
-                                    <div class="home-indicator"></div>
-                                </div>
-                            </div>
-
-                    </MudItem>
-                </MudGrid>
-            </MudCardContent>
-        </MudCard>
-
-        <!-- Document Management System (DSWD) -->
-        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 56px;">
-            <MudCardContent Class="d-flex justify-content-center">
-                <MudGrid Class="element-grid" Style="width:100%">
-                    <MudItem xs="12" sm="12" lg="6" md="12" Class="summar-project">
-                        <div class="row">
-                            <div class="col-12">
-                                <MudText Typo="Typo.h3" Style="font-weight: bolder; font-size: 1.25rem;">Document Management System (DSWD)</MudText>
-                                <MudText Typo="Typo.h4" Style="font-weight: normal; color: var(--gh-primary); font-size: 1.1rem;">Full-Stack .NET & OCR Integration</MudText>
-                                <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                    Developed and enhanced a Document Management System (DMS) for document tracking and storage. Integrated OCR technology to digitize physical documents, making them searchable and accessible.
-                                </MudText>
-                            </div>
-                            <div class="col-12 d-flex justify-content-between mt-5 gap-5">
-                                <MudGrid>
-                                    <MudItem xs="12" sm="12" lg="6" md="6">
-                                        <div class="web-notes">
-                                            <MudIcon Icon="@Icons.Material.Filled.Description" Size="Size.Large" Color="Color.Success" />
-                                            <MudText Typo="Typo.h6">OCR Digitization</MudText>
-                                            <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                                Automatic text extraction from scanned documents using advanced OCR tools, enabling full-text search across thousands of records.
-                                            </MudText>
-                                        </div>
-                                    </MudItem>
-                                    <MudItem xs="12" sm="12" lg="6" md="6">
-                                        <div class="mobile-notes">
-                                            <MudIcon Icon="@Icons.Material.Filled.Search" Size="Size.Large" Color="Color.Success" />
-                                            <MudText Typo="Typo.h6">Efficient Archiving</MudText>
-                                            <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted)">
-                                                Implemented structured categorization and indexing, drastically improving document retrieval time for government staff.
-                                            </MudText>
-                                        </div>
-                                    </MudItem>
-                                </MudGrid>
-                            </div>
-                        </div>
-                    </MudItem>
-                    <MudItem Class="project" xs="12" sm="12" lg="6" md="12" Style="position: relative;">
-                        <div class="web-section dms-section glass-container">
-                            <div class="browser-chrome">
-                                <div class="browser-dots"><span></span><span></span><span></span></div>
-                                <div class="browser-address">
-                                    <MudIcon Icon="@Icons.Material.Filled.Lock" Size="Size.Small" Style="color: #8b949e; font-size: 12px;" />
-                                    dms.dswd.gov.ph
-                                </div>
-                            </div>
-                            <div class="mockup-body">
-                            <!-- Sidebar -->
-                            <div class="mockup-sidebar" style="width: 140px; align-items: stretch; padding: 15px;">
-                                <div class="d-flex align-center mb-6 px-2">
-                                    <div style="width:12px; height:12px; border-radius:3px; background: var(--gh-green-4);" class="mr-2"></div>
-                                    <MudText Typo="Typo.caption" Style="color: #fff; font-weight: 700; letter-spacing: 1px;">DSWD DMS</MudText>
-                                </div>
-                                <div class="sidebar-nav-item active"><MudIcon Icon="@Icons.Material.Filled.Folder" Size="Size.Small" Class="mr-2"/> All Files</div>
-                                <div class="sidebar-nav-item"><MudIcon Icon="@Icons.Material.Filled.AccessTime" Size="Size.Small" Class="mr-2"/> Recent</div>
-                                <div class="sidebar-nav-item"><MudIcon Icon="@Icons.Material.Filled.Star" Size="Size.Small" Class="mr-2"/> Starred</div>
-                                <div class="sidebar-nav-item"><MudIcon Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Class="mr-2"/> Trash</div>
-                                
-                                <div class="mt-auto px-2">
-                                    <MudText Typo="Typo.caption" Style="color: #64748b; font-size: 8px;">STORAGE</MudText>
-                                    <MudProgressLinear Color="Color.Info" Value="75" Size="Size.Small" Class="rounded-pill mt-1" Style="height:4px;"/>
-                                    <MudText Typo="Typo.caption" Style="color: #94a3b8; font-size: 8px;" Class="mt-1 d-block">1.2GB of 2GB used</MudText>
-                                </div>
-                            </div>
-                            
-                            <!-- Main Content Area -->
-                            <div class="mockup-content">
-                                <div class="mockup-header" style="background: transparent;">
-                                    <div class="glass-search d-flex align-center px-3 py-1" style="width: 200px; border-radius: 12px; background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05);">
-                                        <MudIcon Icon="@Icons.Material.Filled.Search" Size="Size.Small" Style="color: #64748b;"/>
-                                        <MudText Typo="Typo.caption" Class="ml-2" Style="color: #64748b;">Search files...</MudText>
-                                    </div>
-                                    <MudSpacer />
-                                    <MudIconButton Icon="@Icons.Material.Filled.FileUpload" Size="Size.Small" Style="color: var(--gh-green-4); background: rgba(35, 134, 54, 0.1); border-radius: 8px;"/>
-                                </div>
-                                
-                                <div class="px-4 mt-2">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="folder-card p-3">
-                                            <MudIcon Icon="@Icons.Material.Filled.Folder" Style="color: #3b82f6;" />
-                                            <MudText Typo="Typo.caption" Class="mt-2 d-block" Style="color: #fff; font-weight: 600;">Case Files</MudText>
-                                            <MudText Typo="Typo.caption" Style="color: #64748b; font-size: 8px;">124 Files</MudText>
-                                        </div>
-                                        <div class="folder-card p-3">
-                                            <MudIcon Icon="@Icons.Material.Filled.Folder" Style="color: #10b981;" />
-                                            <MudText Typo="Typo.caption" Class="mt-2 d-block" Style="color: #fff; font-weight: 600;">Reports</MudText>
-                                            <MudText Typo="Typo.caption" Style="color: #64748b; font-size: 8px;">48 Files</MudText>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="glass-card overflow-hidden">
-                                        <div class="p-3 border-bottom" style="border-bottom: 1px solid rgba(255,255,255,0.05) !important;">
-                                            <MudText Typo="Typo.caption" Style="color: #fff; font-weight: 600;">DOCUMENTS</MudText>
-                                        </div>
-                                        <div style="max-height: 180px; overflow-y: auto;">
-                                            <MudTable Items="@DocumentRecords" Dense="true" Elevation="0" Style="background: transparent;">
-                                                <RowTemplate>
-                                                    <MudTd Style="border-bottom: 1px solid rgba(255,255,255,0.03);">
-                                                        <div class="d-flex align-center">
-                                                            <MudIcon Icon="@(context.DocumentName.EndsWith(".pdf") ? Icons.Material.Filled.PictureAsPdf : Icons.Material.Filled.Image)" 
-                                                                     Size="Size.Small"  Class="mr-3"
-                                                                     Style="@(context.DocumentName.EndsWith(".pdf") ? "color: #ef4444;" : "color: #3b82f6;")"/>
-                                                            <div>
-                                                                <MudText Typo="Typo.caption" Style="color: #e2e8f0; font-weight: 500; font-size: 10px;">@context.DocumentName</MudText>
-                                                                <MudText Typo="Typo.caption" Style="color: #64748b; font-size: 8px;" Class="d-block">@context.Category • @context.FileSize</MudText>
-                                                            </div>
-                                                        </div>
-                                                    </MudTd>
-                                                    <MudTd Style="border-bottom: 1px solid rgba(255,255,255,0.03); text-align: right;">
-                                                        <div class="ocr-badge @(context.Status.Contains("OCR") ? "pending" : "done")">
-                                                            @(context.Status.Contains("OCR") ? "OCR Processing" : "Fully Searchable")
-                                                        </div>
-                                                    </MudTd>
-                                                </RowTemplate>
-                                            </MudTable>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="mobile-container">
-                                <div class="mobile-section">
-                                    <div class="top-section d-flex justify-content-between align-content-center">
-                                        <p style="font-size:14px; margin-top: 4px; margin-bottom: 0px; color: white">@DateTime.Now.ToString("hh:mm tt")</p>
-                                        <div class="network-section">
-                                            <svg style="width:18px" viewBox="0 0 24 24"><path d="M18.5 4c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-13c0-.83.67-1.5 1.5-1.5zm-12 10c.83 0 1.5.67 1.5 1.5v3c0 .83-.67 1.5-1.5 1.5S5 19.33 5 18.5v-3c0-.83.67-1.5 1.5-1.5zm6-5c.83 0 1.5.67 1.5 1.5v8c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-8c0-.83.67-1.5 1.5-1.5z" fill="#ffffff"></path></svg>
-                                            <svg style="width:18px" viewBox="0 0 24 24"><path d="M2.06 10.06c.51.51 1.32.56 1.87.1 4.67-3.84 11.45-3.84 16.13-.01.56.46 1.38.42 1.89-.09.59-.59.55-1.57-.1-2.1z" fill="#ffffff"></path></svg>
-                                            <svg style="width:18px" viewBox="0 0 24 24"><path d="M15.67 4H14V3c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1v1H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.34 22h7.32c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z" fill="#ffffff"></path></svg>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <div class="px-4 pt-6 pb-2">
-                                            <MudText Typo="Typo.h6" Style="color: #fff; font-weight: 700;">Documents</MudText>
-                                            <div class="glass-search d-flex align-center px-3 py-2 mt-4" style="border-radius: 12px; background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05);">
-                                                <MudIcon Icon="@Icons.Material.Filled.Search" Size="Size.Small" Style="color: #64748b;"/>
-                                                <MudText Typo="Typo.caption" Class="ml-2" Style="color: #64748b;">Search folders...</MudText>
-                                            </div>
-                                        </div>
-                                        
-                                        <MudMainContent Class="pt-2 px-4">
-                                            <div class="d-flex gap-3 mb-6 overflow-x-auto pb-2">
-                                                <div class="folder-card p-3 flex-shrink-0" style="width: 110px;">
-                                                    <MudIcon Icon="@Icons.Material.Filled.Folder" Style="color: #3b82f6;" />
-                                                    <MudText Typo="Typo.caption" Class="mt-2 d-block" Style="color: #fff; font-weight: 600;">Case Files</MudText>
-                                                    <MudText Typo="Typo.caption" Style="color: #64748b; font-size: 8px;">124 Files</MudText>
-                                                </div>
-                                                <div class="folder-card p-3 flex-shrink-0" style="width: 110px;">
-                                                    <MudIcon Icon="@Icons.Material.Filled.Folder" Style="color: #10b981;" />
-                                                    <MudText Typo="Typo.caption" Class="mt-2 d-block" Style="color: #fff; font-weight: 600;">Reports</MudText>
-                                                    <MudText Typo="Typo.caption" Style="color: #64748b; font-size: 8px;">48 Files</MudText>
-                                                </div>
-                                            </div>
-
-                                            <MudText Typo="Typo.caption" Style="color: #64748b; font-weight: 700;" Class="mb-3 d-block">RECENT UPLOADS</MudText>
-                                            @foreach(var doc in DocumentRecords.Take(3))
-                                            {
-                                                <div class="d-flex align-center mb-4">
-                                                    <MudIcon Icon="@(doc.DocumentName.EndsWith(".pdf") ? Icons.Material.Filled.PictureAsPdf : Icons.Material.Filled.Image)" 
-                                                             Size="Size.Small"  Class="mr-3"
-                                                             Style="@(doc.DocumentName.EndsWith(".pdf") ? "color: #ef4444;" : "color: #3b82f6;")"/>
-                                                    <div class="flex-grow-1">
-                                                        <MudText Typo="Typo.caption" Style="color: #e2e8f0; font-weight: 500;">@doc.DocumentName</MudText>
-                                                        <MudText Typo="Typo.caption" Style="color: #64748b; font-size: 8px;" Class="d-block">@doc.Category • @doc.FileSize</MudText>
-                                                    </div>
-                                                    <div class="ocr-badge @(doc.Status.Contains("OCR") ? "pending" : "done")" style="font-size: 6px;">
-                                                        @(doc.Status.Contains("OCR") ? "OCR" : "READY")
-                                                    </div>
-                                                </div>
-                                            }
-                                            
-                                            @* <div class="mt-4 p-3 glass-card d-flex align-center" style="border-style: dashed; background: transparent; border-color: rgba(127, 86, 217, 0.3);">
-                                                <MudIcon Icon="@Icons.Material.Filled.Add" Style="color: #7F56D9;" Class="mr-2"/>
-                                                <MudText Typo="Typo.caption" Style="color: #7F56D9; font-weight: 600;">Upload New Document</MudText>
-                                            </div> *@
-                                        </MudMainContent>
-                                    </div>
-                                    <div class="home-indicator"></div>
-                                </div>
-                            </div>
-
-                    </MudItem>
-                </MudGrid>
-            </MudCardContent>
-        </MudCard>
+            <div class="current-stack">
+                <span>.NET</span><span>OCR</span><span>Document management</span><span>Indexing &amp; search</span>
+            </div>
+        </div>
       @* <div class="d-flex justify-content-center mt-5"> *@
       @*       <MudButton Variant="Variant.Filled" Color="Color.Primary">View more</MudButton> *@
       @* </div> *@
@@ -946,6 +445,21 @@
         box-shadow: 0 0 10px var(--gh-green-4);
     }
 
+    .project-text-card {
+        margin-top: 24px;
+        background: var(--gh-canvas);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-text-card:hover {
+        transform: translateY(-2px);
+        border-color: var(--gh-border-strong);
+    }
+
+    .current-badge.is-past {
+        color: var(--gh-text);
+    }
+
     .current-companies {
         font-size: 14px;
         color: var(--gh-text-muted);
@@ -968,7 +482,7 @@
 
     .current-highlights {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 20px;
         padding-top: 28px;
         border-top: 1px solid var(--gh-border);
