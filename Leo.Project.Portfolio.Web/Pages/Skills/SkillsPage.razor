@@ -30,9 +30,54 @@
             <span class="skills-also-label">Also:</span> Newtonsoft.Json, Unity 3D/2D, WebGL
         </p>
     </div>
+
+    <div class="tech-marquee" aria-label="Tools and technologies I use">
+        @for (var pass = 0; pass < 2; pass++)
+        {
+            <ul class="tech-track" aria-hidden="@(pass == 1 ? "true" : "false")">
+                @foreach (var tech in TechLogos)
+                {
+                    <li class="tech-item">
+                        <img src="images/tech/@(tech.File).svg" alt="@(pass == 0 ? tech.Name : "")" class="@(tech.DarkLogo ? "invert-on-dark" : "")" loading="lazy" />
+                        <span>@tech.Name</span>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
 </section>
 
 @code {
+    private record TechLogo(string Name, string File, bool DarkLogo = false);
+
+    private readonly TechLogo[] TechLogos =
+    {
+        new("C#", "csharp"),
+        new(".NET", "dot-net"),
+        new("ASP.NET Core", "dotnetcore"),
+        new("Blazor", "blazor"),
+        new("Visual Studio", "visualstudio"),
+        new("VS Code", "vscode"),
+        new("Rider", "rider"),
+        new("SQL Server", "microsoftsqlserver"),
+        new("Azure SQL", "azuresqldatabase"),
+        new("SQLite", "sqlite"),
+        new("Azure", "azure"),
+        new("Azure DevOps", "azuredevops"),
+        new("NuGet", "nuget"),
+        new("Swagger", "swagger"),
+        new("Git", "git"),
+        new("GitHub", "github", DarkLogo: true),
+        new("Flutter", "flutter"),
+        new("Dart", "dart"),
+        new("HTML5", "html5"),
+        new("CSS3", "css3"),
+        new("JavaScript", "javascript"),
+        new("Bootstrap", "bootstrap"),
+        new("Figma", "figma"),
+        new("Unity", "unity", DarkLogo: true),
+    };
+
     private record SkillGroup(string Title, string Icon, string[] Skills);
 
     private readonly SkillGroup[] SkillGroups =
@@ -135,6 +180,86 @@
         font-family: var(--font-mono);
         color: var(--gh-green-4);
         margin-right: 6px;
+    }
+
+    .tech-marquee {
+        display: flex;
+        overflow: hidden;
+        margin-top: 48px;
+        padding: 6px 0;
+        -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    }
+
+    .tech-track {
+        display: flex;
+        flex-shrink: 0;
+        gap: 14px;
+        padding: 0 7px 0 7px;
+        margin: 0;
+        list-style: none;
+        animation: tech-scroll 45s linear infinite;
+    }
+
+    .tech-marquee:hover .tech-track {
+        animation-play-state: paused;
+    }
+
+    .tech-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        padding: 10px 16px;
+        background: var(--gh-canvas);
+        border: 1px solid var(--gh-border);
+        border-radius: 999px;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        color: var(--gh-text);
+        white-space: nowrap;
+        transition: border-color 0.2s ease;
+    }
+
+    .tech-item:hover {
+        border-color: var(--gh-border-strong);
+    }
+
+    .tech-item img {
+        width: 26px;
+        height: 26px;
+        object-fit: contain;
+    }
+
+    [data-theme="dark"] .tech-item img.invert-on-dark {
+        filter: invert(1);
+    }
+
+    @@keyframes tech-scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+
+    @@media (prefers-reduced-motion: reduce) {
+        .tech-track {
+            animation: none;
+        }
+
+        .tech-marquee {
+            flex-wrap: wrap;
+            justify-content: center;
+            -webkit-mask-image: none;
+            mask-image: none;
+        }
+
+        .tech-track[aria-hidden="true"] {
+            display: none;
+        }
+
+        .tech-track {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     @@media (max-width: 992px) {
