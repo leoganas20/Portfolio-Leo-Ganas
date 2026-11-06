@@ -88,6 +88,12 @@
     }
     </script>
 
+    <style>
+        /* Paint the theme background immediately, before any stylesheet or the app loads. */
+        html { background-color: #090c10; }
+        html[data-theme="light"] { background-color: #fbfcfd; }
+    </style>
+
     <base href="/" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
@@ -99,63 +105,44 @@
     <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
     <script src="downloadCV.js"></script>
     <style>
+        /* Static summary for crawlers and screen readers; not shown visually. */
         .seo-shell {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 72px 24px 64px;
-            color: var(--gh-text-muted);
-            font-family: var(--font-body);
-            line-height: 1.65;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
         }
-        .seo-shell h1 {
-            font-family: var(--font-display);
-            font-size: clamp(34px, 5vw, 48px);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            color: var(--gh-text);
-            margin: 0 0 16px;
-        }
-        .seo-shell h2 {
-            font-family: var(--font-display);
-            font-size: 18px;
-            color: var(--gh-text);
-            margin: 32px 0 8px;
-        }
-        .seo-shell ul { list-style: disc; padding-left: 20px; margin: 0; }
-        .seo-shell li { margin-bottom: 6px; }
-        .seo-shell strong { color: var(--gh-text); }
-        .seo-shell a { color: var(--gh-green-4); }
-        .seo-eyebrow {
-            font-family: var(--font-mono);
-            font-size: 13px;
-            color: var(--gh-green-4);
-            margin: 0 0 12px;
-        }
-        .seo-lead { font-size: 18px; margin: 0 0 20px; }
-        .seo-loading {
+        .boot-loader {
+            position: fixed;
+            inset: 0;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-family: var(--font-mono);
-            font-size: 13px;
-            margin: 0;
+            justify-content: center;
         }
-        .seo-spinner {
-            width: 14px;
-            height: 14px;
-            border: 2px solid var(--gh-border-strong);
-            border-top-color: var(--gh-green-4);
+        .boot-spinner {
+            width: 28px;
+            height: 28px;
+            border: 3px solid #1f2731;
+            border-top-color: #3ee07f;
             border-radius: 50%;
-            animation: seo-spin 0.8s linear infinite;
+            animation: boot-spin 0.8s linear infinite;
         }
-        @keyframes seo-spin { to { transform: rotate(360deg); } }
+        @keyframes boot-spin { to { transform: rotate(360deg); } }
+        @media (prefers-reduced-motion: reduce) {
+            .boot-spinner { animation-duration: 2.4s; }
+        }
     </style>
 </head>
 
 <body>
     
     <div id="app">
-        <!-- Static summary for search engines and slow connections; Blazor replaces it on load. -->
+        <div class="boot-loader" role="status" aria-label="Loading portfolio"><span class="boot-spinner"></span></div>
+        <!-- Static summary for search engines and screen readers; Blazor replaces it on load. -->
         <main class="seo-shell">
             <header>
                 <p class="seo-eyebrow">Full-Stack .NET Developer &middot; Open to remote roles</p>
@@ -165,7 +152,6 @@
                     Web APIs, Entity Framework, SQL Server and Azure, with Blazor and .NET MAUI on the front end.
                     I build new systems and modernize legacy ones into clean, maintainable codebases.
                 </p>
-                <p class="seo-loading"><span class="seo-spinner" aria-hidden="true"></span>Loading full portfolio&hellip;</p>
             </header>
 
             <section>
