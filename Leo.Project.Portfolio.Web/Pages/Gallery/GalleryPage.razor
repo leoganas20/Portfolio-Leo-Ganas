@@ -1,5 +1,5 @@
 @inject Leo.Project.Portfolio.Web.Services.ThemeService ThemeService
-<section id="portfolio-gallery" class="portfolio-gallery" style="padding: 100px 0; background-color: var(--gh-bg);">
+<section id="portfolio-gallery" class="portfolio-gallery" style="padding: 80px 0; background-color: var(--gh-bg); border-top: 1px solid var(--gh-border);">
     <div class="container">
         <div class="text-center mb-16">
             <MudText Typo="Typo.h6" Style="color: var(--gh-green-3); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Professional Impact</MudText>
@@ -7,61 +7,106 @@
         </div>
 
     <div class="modern-experience-list">
-        <!-- Blackfort Section -->
+        <!-- KVLR Code Section -->
         <div class="exp-row reveal stagger-1">
+            <div class="exp-logo-area">
+                <img src="kvlr-logo.png" alt="KVLR Code - Enterprise Software Consultancy Logo" class="app-icon-logo" loading="lazy" />
+            </div>
+            <div class="exp-info-area">
+                <MudText Typo="Typo.h4" Class="exp-company">KVLR Code</MudText>
+                <MudText Typo="Typo.subtitle1" Class="exp-role">.NET Software Engineer</MudText>
+                <MudText Typo="Typo.body2" Class="exp-meta">December 2025 &ndash; Present &middot; Malta &middot; Remote</MudText>
+                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Enterprise Software Consultancy</MudText>
+                <MudText Typo="Typo.body1" Class="exp-description">
+                    Working as a .NET Software Engineer at KVLR Code, maintaining and refactoring a large, long-running
+                    legacy codebase for a licensing platform built on C# and .NET Core. Untangling and modernizing
+                    existing modules while preserving production behavior, with Entity Framework and SQL Server on
+                    the data layer.
+                </MudText>
+            </div>
+        </div>
+
+        <!-- Born Digital Section -->
+        <div class="exp-row reverse reveal stagger-2">
+            <div class="exp-logo-area">
+                <img src="born-digital-logo.png" alt="Born Digital - Digital Engineering Studio Logo" class="app-icon-logo" loading="lazy" />
+            </div>
+            <div class="exp-info-area">
+                <MudText Typo="Typo.h4" Class="exp-company">Born Digital</MudText>
+                <MudText Typo="Typo.subtitle1" Class="exp-role">.NET Software Engineer</MudText>
+                <MudText Typo="Typo.body2" Class="exp-meta">December 2025 &ndash; Present &middot; Malta &middot; Remote</MudText>
+                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Digital Engineering & Product Development</MudText>
+                <MudText Typo="Typo.body1" Class="exp-description">
+                    Contributing as a .NET Software Engineer at Born Digital on the same licensing platform initiative,
+                    maintaining and refactoring a sizeable legacy codebase of ASP.NET Core Web APIs in C#. Reducing
+                    technical debt in existing services while shipping new functionality alongside the refactor.
+                </MudText>
+            </div>
+        </div>
+
+        <!-- Blackfort Section -->
+        <div class="exp-row reveal stagger-3">
             <div class="exp-logo-area">
                 <img src="blackfort-logo-black.webp" alt="Blackfort PH - Software Engineering & Cloud Solutions Company Logo" class="large-exp-logo" loading="lazy" style="filter: @(ThemeService.IsDarkMode ? "drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px 1px 0 white)" : "drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px 1px 0 black)");" />
             </div>
             <div class="exp-info-area">
                 <MudText Typo="Typo.h4" Class="exp-company">Blackfort</MudText>
+                <MudText Typo="Typo.subtitle1" Class="exp-role">Full-Stack Blazor & MAUI Developer</MudText>
+                <MudText Typo="Typo.body2" Class="exp-meta">June 2023 &ndash; December 2025</MudText>
                 <MudText Typo="Typo.body2" Class="exp-industry">Industry: Software Engineering & Cloud Solutions</MudText>
                 <MudText Typo="Typo.body1" Class="exp-description">
                     Contributed as a key developer at Blackfort, primarily the developer of the native Mobile Application
-                    for infrastructure monitoring. Collaborated on the development of high-performance web-based dashboards, 
+                    for infrastructure monitoring. Collaborated on the development of high-performance web-based dashboards,
                     ensuring seamless integration for real-time data tracking and offline support across multiple platforms.
                 </MudText>
             </div>
         </div>
 
         <!-- Provincial Gov Section -->
-        <div class="exp-row reverse reveal stagger-2">
+        <div class="exp-row reverse reveal stagger-4">
             <div class="exp-logo-area">
                 <img src="provincial misamis.png" alt="Provincial Government of Misamis Oriental - Public Sector Digital Transformation Logo" class="large-exp-logo" loading="lazy" />
             </div>
             <div class="exp-info-area">
                 <MudText Typo="Typo.h4" Class="exp-company">Provincial Gov. of Misamis Oriental</MudText>
+                <MudText Typo="Typo.subtitle1" Class="exp-role">Blazor WebAssembly Developer</MudText>
+                <MudText Typo="Typo.body2" Class="exp-meta">May 2021 &ndash; June 2023</MudText>
                 <MudText Typo="Typo.body2" Class="exp-industry">Industry: Public Sector & Governance</MudText>
                 <MudText Typo="Typo.body1" Class="exp-description">
-                    Implemented the digital transformation of government services. Integrated the Electronic 
-                    Leave Application System and various citizen-facing portals that improved administrative efficiency 
+                    Implemented the digital transformation of government services. Integrated the Electronic
+                    Leave Application System and various citizen-facing portals that improved administrative efficiency
                     across all provincial departments.
                 </MudText>
             </div>
         </div>
-        
+
         <!-- DSWD Section -->
-        <div class="exp-row reveal stagger-3">
+        <div class="exp-row reveal stagger-5">
             <div class="exp-logo-area">
                 <img src="DSWD-Logo-700x394.png" alt="Department of Social Welfare and Development - Government Agency Logo" class="large-exp-logo" loading="lazy" />
             </div>
             <div class="exp-info-area">
                 <MudText Typo="Typo.h4" Class="exp-company">Dept. of Social Welfare & Development</MudText>
+                <MudText Typo="Typo.subtitle1" Class="exp-role">.NET Developer</MudText>
+                <MudText Typo="Typo.body2" Class="exp-meta">January 2020 &ndash; December 2020</MudText>
                 <MudText Typo="Typo.body2" Class="exp-industry">Industry: Social Services / Government</MudText>
                 <MudText Typo="Typo.body1" Class="exp-description">
-                    Developed high-integrity Document Management Systems at scale. Engineered the underlying OCR and 
-                    indexing engines that allow social workers to instantly retrieve and process citizen records with 
+                    Developed high-integrity Document Management Systems at scale. Engineered the underlying OCR and
+                    indexing engines that allow social workers to instantly retrieve and process citizen records with
                     perfect accuracy.
                 </MudText>
             </div>
         </div>
 
         <!-- SVI Section -->
-        <div class="exp-row reverse reveal stagger-4">
+        <div class="exp-row reverse reveal stagger-6">
             <div class="exp-logo-area">
                 <img src="W-SVI Logos_SVI Corporation.avif" alt="SVI Corporation - Software Ventures International Corporate Logo" class="large-exp-logo" loading="lazy" style="filter: @(ThemeService.IsDarkMode ? "" : "drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px 1px 0 black)");" />
             </div>
             <div class="exp-info-area">
                 <MudText Typo="Typo.h4" Class="exp-company">Software Venture International</MudText>
+                <MudText Typo="Typo.subtitle1" Class="exp-role">Digitization Project Team Leader</MudText>
+                <MudText Typo="Typo.body2" Class="exp-meta">January 2020 &ndash; August 2020</MudText>
                 <MudText Typo="Typo.body2" Class="exp-industry">Industry: Corporate Software Services</MudText>
                 <MudText Typo="Typo.body1" Class="exp-description">
                     Pioneered the data capture initiative for large-scale OCR digitization projects. Led a cross-functional team in transforming historical government records into secure, digital assets.
@@ -112,6 +157,19 @@
         transform: scale(1.05);
     }
 
+    .app-icon-logo {
+        width: 140px;
+        height: 140px;
+        border-radius: 28px;
+        object-fit: cover;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+        transition: transform 0.5s ease;
+    }
+
+    .exp-row:hover .app-icon-logo {
+        transform: scale(1.05);
+    }
+
     .exp-info-area {
         flex: 1;
     }
@@ -119,8 +177,23 @@
     .exp-company {
         color: var(--gh-text);
         font-weight: 800 !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 4px !important;
         letter-spacing: -1px;
+    }
+
+    .exp-role {
+        color: var(--gh-text);
+        font-weight: 600 !important;
+        opacity: 0.85;
+        margin-bottom: 4px !important;
+        display: block;
+    }
+
+    .exp-meta {
+        color: var(--gh-text-muted);
+        font-size: 0.9rem !important;
+        margin-bottom: 8px !important;
+        display: block;
     }
 
     .exp-industry {
