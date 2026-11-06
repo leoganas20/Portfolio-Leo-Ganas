@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Outdated CV versions; the current one is Leonardo_Ganas_CV.pdf
+Disallow: /Leo-CV.pdf
+Disallow: /Leo-developer-CV.pdf
+Disallow: /leonardo-ganas.cv.pdf
+
 Sitemap: https://www.leoganas.com/sitemap.xml
