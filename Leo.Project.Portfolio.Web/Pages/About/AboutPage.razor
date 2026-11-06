@@ -1,40 +1,178 @@
 
 
-<section id="about" style="padding: 60px 0; background-color: var(--gh-bg);">
+<section id="about" class="about-section">
     <div class="container">
-        <div class="about-card reveal" style="background: var(--gh-canvas); border: 1px solid var(--gh-border); border-radius: 12px; padding: 40px;">
-            <MudGrid Spacing="6">
-                <MudItem xs="12" md="6">
-                    <MudText Typo="Typo.h3" Style="font-weight: 700; color: var(--gh-text); margin-bottom: 24px; font-size: 1.25rem;">Professional Summary</MudText>
-                    <MudText Typo="Typo.body1" Style="color: var(--gh-text-muted); line-height: 1.8; font-size: 1.1rem;">
-                        I am a dedicated Full-Stack .NET Software Developer with over 6 years of professional experience. 
-                        My expertise lies in building scalable, high-performance web and mobile applications using modern Microsoft technologies.
-                    </MudText>
-                    <MudText Typo="Typo.body1" Class="mt-4" Style="color: var(--gh-text-muted); line-height: 1.8; font-size: 1.1rem;">
-                        I am passionate about translating complex design requirements into elegant, maintainable code. 
-                        Whether it's a responsive Blazor WebAssembly app or a cross-platform .NET MAUI solution, I focus on delivering quality and value.
-                    </MudText>
-                </MudItem>
-                <MudItem xs="12" md="6">
-                    <div style="background: var(--gh-bg); border: 1px solid var(--gh-border); border-radius: 8px; padding: 24px; height: 100%;">
-                        <MudText Typo="Typo.subtitle1" Style="font-weight: 600; color: var(--gh-text); margin-bottom: 12px;">Technical Philosophy</MudText>
-                        <MudText Typo="Typo.body2" Style="color: var(--gh-text-muted); line-height: 1.6;">
-                            I believe in the power of clean code and solid architecture. 
-                            My development process is centered around scalability, security, and a seamless user experience. 
-                            I am a continuous learner, always exploring new ways to optimize workflows, adopting AI trends for faster software delivery, and leveraging the latest framework features.
-                        </MudText>
-                    </div>
-                </MudItem>
-            </MudGrid>
+        <div class="about-layout">
+            <div class="about-intro">
+                <span class="section-eyebrow">// about</span>
+                <h2 class="section-title about-title">Broad .NET experience, built for production</h2>
+                <p class="about-text">
+                    I'm a full-stack .NET developer who has shipped software for government agencies, consultancies and
+                    product teams. I'm comfortable across the whole Microsoft stack &mdash; from the SQL Server schema and
+                    Entity Framework data layer, through ASP.NET Core APIs, to Blazor and .NET MAUI front ends.
+                </p>
+                <p class="about-text">
+                    Today I work remotely with engineering teams in Malta, maintaining and modernizing a large legacy
+                    codebase while new features keep shipping.
+                </p>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-tile">
+                    <span class="stat-value">6+</span>
+                    <span class="stat-label">Years of professional .NET development</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">Organizations, from government to product teams</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-value">Full-stack</span>
+                    <span class="stat-label">Database, API, web and mobile</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-value">Remote</span>
+                    <span class="stat-label">Currently with teams in Malta</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="principles">
+            <div class="principle">
+                <MudIcon Icon="@Icons.Material.Filled.AccountTree" Class="principle-icon" />
+                <div>
+                    <h3 class="principle-title">Clean architecture</h3>
+                    <p class="principle-text">Clear layers and boundaries so a codebase stays easy to change years later.</p>
+                </div>
+            </div>
+            <div class="principle">
+                <MudIcon Icon="@Icons.Material.Filled.Autorenew" Class="principle-icon" />
+                <div>
+                    <h3 class="principle-title">Modernize safely</h3>
+                    <p class="principle-text">Refactor legacy systems step by step without breaking what's in production.</p>
+                </div>
+            </div>
+            <div class="principle">
+                <MudIcon Icon="@Icons.Material.Filled.Bolt" Class="principle-icon" />
+                <div>
+                    <h3 class="principle-title">Keep learning</h3>
+                    <p class="principle-text">Adopting new framework features and AI tooling to deliver faster.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
+    .about-section {
+        padding: 80px 0;
+        background-color: var(--gh-bg);
+        border-top: 1px solid var(--gh-border);
+    }
+
+    .about-layout {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 56px;
+        align-items: center;
+    }
+
+    .about-title {
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        color: var(--gh-text-muted);
+        font-size: 17px;
+        line-height: 1.7;
+        margin: 0 0 14px;
+    }
+
+    .about-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .stat-tile {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 24px;
+        background: var(--gh-canvas);
+        border: 1px solid var(--gh-border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-card);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .stat-tile:hover {
+        transform: translateY(-2px);
+        border-color: var(--gh-border-strong);
+    }
+
+    .stat-value {
+        font-family: var(--font-display);
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: var(--gh-text);
+        line-height: 1;
+    }
+
+    .stat-label {
+        font-size: 14px;
+        line-height: 1.45;
+        color: var(--gh-text-muted);
+    }
+
+    .principles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 56px;
+        padding-top: 40px;
+        border-top: 1px solid var(--gh-border);
+    }
+
+    .principle {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+    }
+
+    .principle .principle-icon {
+        box-sizing: content-box;
+        padding: 9px;
+        border-radius: 10px;
+        background: var(--gh-elevated);
+        border: 1px solid var(--gh-border);
+        color: var(--gh-green-4);
+        flex-shrink: 0;
+    }
+
+    .principle-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--gh-text);
+        margin: 2px 0 6px;
+    }
+
+    .principle-text {
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--gh-text-muted);
+        margin: 0;
+    }
+
     @@media (max-width: 992px) {
-        .about-grid {
-            grid-template-columns: 1fr !important;
+        .about-layout {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .principles {
+            grid-template-columns: 1fr;
         }
     }
 </style>
- 

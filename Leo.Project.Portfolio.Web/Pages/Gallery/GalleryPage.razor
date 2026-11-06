@@ -1,5 +1,5 @@
 @inject Leo.Project.Portfolio.Web.Services.ThemeService ThemeService
-<section id="portfolio-gallery" class="portfolio-gallery" style="padding: 80px 0; background-color: var(--gh-bg); border-top: 1px solid var(--gh-border);">
+<section id="portfolio-gallery" class="experience-section">
     <div class="container">
         <div class="section-head">
             <span class="section-eyebrow">// experience</span>
@@ -7,237 +7,86 @@
             <p class="section-sub">Six years shipping .NET software, from government digital services to remote engineering teams in Malta.</p>
         </div>
 
-    <div class="modern-experience-list">
-        <!-- KVLR Code Section -->
-        <div class="exp-row reveal stagger-1">
-            <div class="exp-logo-area">
-                <img src="kvlr-logo.png" alt="KVLR Code - Enterprise Software Consultancy Logo" class="app-icon-logo" loading="lazy" />
-            </div>
-            <div class="exp-info-area">
-                <MudText Typo="Typo.h4" Class="exp-company">KVLR Code</MudText>
-                <MudText Typo="Typo.subtitle1" Class="exp-role">.NET Software Engineer</MudText>
-                <MudText Typo="Typo.body2" Class="exp-meta">December 2025 &ndash; Present &middot; Malta &middot; Remote</MudText>
-                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Enterprise Software Consultancy</MudText>
-                <MudText Typo="Typo.body1" Class="exp-description">
-                    Working as a .NET Software Engineer at KVLR Code, maintaining and refactoring a large, long-running
-                    legacy codebase for a licensing platform built on C# and .NET Core. Untangling and modernizing
-                    existing modules while preserving production behavior, with Entity Framework and SQL Server on
-                    the data layer.
-                </MudText>
-            </div>
-        </div>
-
-        <!-- Born Digital Section -->
-        <div class="exp-row reverse reveal stagger-2">
-            <div class="exp-logo-area">
-                <img src="born-digital-logo.png" alt="Born Digital - Digital Engineering Studio Logo" class="app-icon-logo" loading="lazy" />
-            </div>
-            <div class="exp-info-area">
-                <MudText Typo="Typo.h4" Class="exp-company">Born Digital</MudText>
-                <MudText Typo="Typo.subtitle1" Class="exp-role">.NET Software Engineer</MudText>
-                <MudText Typo="Typo.body2" Class="exp-meta">December 2025 &ndash; Present &middot; Malta &middot; Remote</MudText>
-                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Digital Engineering & Product Development</MudText>
-                <MudText Typo="Typo.body1" Class="exp-description">
-                    Contributing as a .NET Software Engineer at Born Digital on the same licensing platform initiative,
-                    maintaining and refactoring a sizeable legacy codebase of ASP.NET Core Web APIs in C#. Reducing
-                    technical debt in existing services while shipping new functionality alongside the refactor.
-                </MudText>
-            </div>
-        </div>
-
-        <!-- Blackfort Section -->
-        <div class="exp-row reveal stagger-3">
-            <div class="exp-logo-area">
-                <img src="blackfort-logo-black.webp" alt="Blackfort PH - Software Engineering & Cloud Solutions Company Logo" class="large-exp-logo" loading="lazy" style="filter: @(ThemeService.IsDarkMode ? "drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px 1px 0 white)" : "drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px 1px 0 black)");" />
-            </div>
-            <div class="exp-info-area">
-                <MudText Typo="Typo.h4" Class="exp-company">Blackfort</MudText>
-                <MudText Typo="Typo.subtitle1" Class="exp-role">Full-Stack Blazor & MAUI Developer</MudText>
-                <MudText Typo="Typo.body2" Class="exp-meta">June 2023 &ndash; December 2025</MudText>
-                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Software Engineering & Cloud Solutions</MudText>
-                <MudText Typo="Typo.body1" Class="exp-description">
-                    Contributed as a key developer at Blackfort, primarily the developer of the native Mobile Application
-                    for infrastructure monitoring. Collaborated on the development of high-performance web-based dashboards,
-                    ensuring seamless integration for real-time data tracking and offline support across multiple platforms.
-                </MudText>
-            </div>
-        </div>
-
-        <!-- Provincial Gov Section -->
-        <div class="exp-row reverse reveal stagger-4">
-            <div class="exp-logo-area">
-                <img src="provincial misamis.png" alt="Provincial Government of Misamis Oriental - Public Sector Digital Transformation Logo" class="large-exp-logo" loading="lazy" />
-            </div>
-            <div class="exp-info-area">
-                <MudText Typo="Typo.h4" Class="exp-company">Provincial Gov. of Misamis Oriental</MudText>
-                <MudText Typo="Typo.subtitle1" Class="exp-role">Blazor WebAssembly Developer</MudText>
-                <MudText Typo="Typo.body2" Class="exp-meta">May 2021 &ndash; June 2023</MudText>
-                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Public Sector & Governance</MudText>
-                <MudText Typo="Typo.body1" Class="exp-description">
-                    Implemented the digital transformation of government services. Integrated the Electronic
-                    Leave Application System and various citizen-facing portals that improved administrative efficiency
-                    across all provincial departments.
-                </MudText>
-            </div>
-        </div>
-
-        <!-- DSWD Section -->
-        <div class="exp-row reveal stagger-5">
-            <div class="exp-logo-area">
-                <img src="DSWD-Logo-700x394.png" alt="Department of Social Welfare and Development - Government Agency Logo" class="large-exp-logo" loading="lazy" />
-            </div>
-            <div class="exp-info-area">
-                <MudText Typo="Typo.h4" Class="exp-company">Dept. of Social Welfare & Development</MudText>
-                <MudText Typo="Typo.subtitle1" Class="exp-role">.NET Developer</MudText>
-                <MudText Typo="Typo.body2" Class="exp-meta">January 2020 &ndash; December 2020</MudText>
-                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Social Services / Government</MudText>
-                <MudText Typo="Typo.body1" Class="exp-description">
-                    Developed high-integrity Document Management Systems at scale. Engineered the underlying OCR and
-                    indexing engines that allow social workers to instantly retrieve and process citizen records with
-                    perfect accuracy.
-                </MudText>
-            </div>
-        </div>
-
-        <!-- SVI Section -->
-        <div class="exp-row reverse reveal stagger-6">
-            <div class="exp-logo-area">
-                <img src="W-SVI Logos_SVI Corporation.avif" alt="SVI Corporation - Software Ventures International Corporate Logo" class="large-exp-logo" loading="lazy" style="filter: @(ThemeService.IsDarkMode ? "" : "drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px 1px 0 black)");" />
-            </div>
-            <div class="exp-info-area">
-                <MudText Typo="Typo.h4" Class="exp-company">Software Venture International</MudText>
-                <MudText Typo="Typo.subtitle1" Class="exp-role">Digitization Project Team Leader</MudText>
-                <MudText Typo="Typo.body2" Class="exp-meta">January 2020 &ndash; August 2020</MudText>
-                <MudText Typo="Typo.body2" Class="exp-industry">Industry: Corporate Software Services</MudText>
-                <MudText Typo="Typo.body1" Class="exp-description">
-                    Pioneered the data capture initiative for large-scale OCR digitization projects. Led a cross-functional team in transforming historical government records into secure, digital assets.
-                </MudText>
-            </div>
-        </div>
+        <ol class="timeline">
+            @foreach (var job in Jobs)
+            {
+                <li class="timeline-item @(job.Current ? "is-current" : "")">
+                    <div class="timeline-date">
+                        <span>@job.Start</span>
+                        <span class="timeline-date-end">@job.End</span>
+                    </div>
+                    <div class="timeline-rail"><span class="timeline-dot"></span></div>
+                    <article class="timeline-card">
+                        <header class="timeline-card-head">
+                            <div>
+                                <h3 class="timeline-company">@job.Company</h3>
+                                <p class="timeline-role">@job.Role</p>
+                                <p class="timeline-meta">@job.Meta</p>
+                            </div>
+                            <div class="timeline-logo @(job.SquareLogo ? "is-square" : "")">
+                                <img src="@job.Logo" alt="@job.Company logo" loading="lazy" style="@LogoFilter(job)" />
+                            </div>
+                        </header>
+                        <p class="timeline-desc">@job.Description</p>
+                        <div class="timeline-tags">
+                            @foreach (var tag in job.Tags)
+                            {
+                                <span>@tag</span>
+                            }
+                        </div>
+                    </article>
+                </li>
+            }
+        </ol>
     </div>
-</div>
 </section>
 
-<style>
-    .modern-experience-list {
-        display: flex;
-        flex-direction: column;
-        gap: 72px;
-        padding-top: 8px;
-    }
-
-    .exp-row {
-        display: flex;
-        align-items: center;
-        gap: 100px;
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeInUp 0.8s forwards;
-    }
-
-    .exp-row.reverse {
-        flex-direction: row-reverse;
-    }
-
-    .exp-logo-area {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-    }
-
-    .large-exp-logo {
-        max-width: 100%;
-        max-height: 200px;
-        object-fit: contain;
-        transition: transform 0.5s ease;
-    }
-
-    .exp-row:hover .large-exp-logo {
-        transform: scale(1.05);
-    }
-
-    .app-icon-logo {
-        width: 140px;
-        height: 140px;
-        border-radius: 28px;
-        object-fit: cover;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-        transition: transform 0.5s ease;
-    }
-
-    .exp-row:hover .app-icon-logo {
-        transform: scale(1.05);
-    }
-
-    .exp-info-area {
-        flex: 1;
-    }
-
-    .exp-company {
-        color: var(--gh-text);
-        font-weight: 800 !important;
-        margin-bottom: 4px !important;
-        letter-spacing: -1px;
-    }
-
-    .exp-role {
-        color: var(--gh-text);
-        font-weight: 600 !important;
-        opacity: 0.85;
-        margin-bottom: 4px !important;
-        display: block;
-    }
-
-    .exp-meta {
-        color: var(--gh-text-muted);
-        font-size: 0.9rem !important;
-        margin-bottom: 8px !important;
-        display: block;
-    }
-
-    .exp-industry {
-        color: var(--gh-green-4);
-        font-family: var(--font-mono) !important;
-        font-size: 12px !important;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-        margin-bottom: 20px !important;
-        display: block;
-    }
-
-    .exp-description {
-        color: var(--gh-text-muted);
-        line-height: 1.8 !important;
-        font-size: 1.1rem !important;
-    }
-
-    @@keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @@media (max-width: 992px) {
-        .exp-row, .exp-row.reverse {
-            flex-direction: column;
-            gap: 40px;
-            text-align: center;
-        }
-        
-        .modern-experience-list {
-            gap: 80px;
-        }
-
-        .large-exp-logo {
-            max-height: 120px;
-        }
-    }
-</style>
-
 @code {
+    private enum LogoTint { None, OutlineAlways, OutlineLightOnly }
+
+    private record Job(string Company, string Role, string Start, string End, string Meta, string Logo,
+        bool SquareLogo, LogoTint Tint, string Description, string[] Tags, bool Current = false);
+
+    private readonly Job[] Jobs =
+    {
+        new("KVLR Code", ".NET Software Engineer", "Dec 2025", "Present", "Enterprise software consultancy · Malta · Remote",
+            "kvlr-logo.png", true, LogoTint.None,
+            "Maintaining and refactoring a large, long-running legacy codebase for a licensing platform built on C# and .NET Core. Untangling and modernizing existing modules while preserving production behavior, with Entity Framework and SQL Server on the data layer.",
+            new[] { "C#", ".NET Core", "Entity Framework", "SQL Server", "Legacy refactoring" }, Current: true),
+        new("Born Digital", ".NET Software Engineer", "Dec 2025", "Present", "Digital engineering & product development · Malta · Remote",
+            "born-digital-logo.png", true, LogoTint.None,
+            "Working on the same licensing platform initiative, maintaining and refactoring a sizeable legacy codebase of ASP.NET Core Web APIs in C#. Reducing technical debt in existing services while shipping new functionality alongside the refactor.",
+            new[] { "ASP.NET Core", "Web API", "C#", "Technical debt reduction" }, Current: true),
+        new("Blackfort", "Full-Stack Blazor & MAUI Developer", "Jun 2023", "Dec 2025", "Software engineering & cloud solutions",
+            "blackfort-logo-black.webp", false, LogoTint.OutlineAlways,
+            "Key developer at Blackfort and primary developer of the native mobile app for infrastructure monitoring. Built web dashboards with real-time data tracking and offline support across platforms.",
+            new[] { "Blazor WebAssembly", ".NET MAUI", "REST APIs", "Telerik UI", "MudBlazor" }),
+        new("Provincial Gov. of Misamis Oriental", "Blazor WebAssembly Developer", "May 2021", "Jun 2023", "Public sector & governance",
+            "provincial misamis.png", false, LogoTint.None,
+            "Implemented the digital transformation of government services. Designed and deployed the Electronic Leave Application System and citizen-facing portals, and trained employees on the new tools.",
+            new[] { "Blazor WebAssembly", "PWA", "Employee training" }),
+        new("Dept. of Social Welfare & Development", ".NET Developer", "Jan 2020", "Dec 2020", "Social services · Government",
+            "DSWD-Logo-700x394.png", false, LogoTint.None,
+            "Developed and enhanced a Document Management System, including the OCR and indexing that lets staff retrieve and process citizen records quickly.",
+            new[] { ".NET", "Document management", "OCR" }),
+        new("Software Venture International", "Digitization Project Team Leader", "Jan 2020", "Aug 2020", "Corporate software services",
+            "W-SVI Logos_SVI Corporation.avif", false, LogoTint.OutlineLightOnly,
+            "Led the data capture workflow for large-scale OCR digitization projects and supervised the team, turning historical government records into secure digital assets.",
+            new[] { "Team leadership", "OCR digitization", "Quality assurance" }),
+    };
+
+    private string LogoFilter(Job job)
+    {
+        const string white = "filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px 1px 0 white);";
+        const string black = "filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px 1px 0 black);";
+        return job.Tint switch
+        {
+            LogoTint.OutlineAlways => ThemeService.IsDarkMode ? white : black,
+            LogoTint.OutlineLightOnly => ThemeService.IsDarkMode ? "" : black,
+            _ => ""
+        };
+    }
+
     protected override void OnInitialized()
     {
         ThemeService.OnThemeChanged += StateHasChanged;
@@ -248,3 +97,212 @@
         ThemeService.OnThemeChanged -= StateHasChanged;
     }
 }
+
+<style>
+    .experience-section {
+        padding: 80px 0;
+        background-color: var(--gh-bg);
+        border-top: 1px solid var(--gh-border);
+    }
+
+    .timeline {
+        list-style: none;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 110px 32px 1fr;
+        gap: 0 16px;
+    }
+
+    .timeline-date {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 26px;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        color: var(--gh-text);
+        line-height: 1.5;
+    }
+
+    .timeline-date-end {
+        color: var(--gh-text-muted);
+    }
+
+    .timeline-rail {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .timeline-rail::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--gh-border);
+    }
+
+    .timeline-item:first-child .timeline-rail::before {
+        top: 30px;
+    }
+
+    .timeline-item:last-child .timeline-rail::before {
+        bottom: auto;
+        height: 30px;
+    }
+
+    .timeline-dot {
+        position: relative;
+        margin-top: 26px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--gh-bg);
+        border: 2px solid var(--gh-border-strong);
+    }
+
+    .timeline-item.is-current .timeline-dot {
+        border-color: var(--gh-green-4);
+        background: var(--gh-green-4);
+        box-shadow: 0 0 0 4px var(--gh-glow), 0 0 12px var(--gh-green-4);
+    }
+
+    .timeline-card {
+        margin-bottom: 20px;
+        padding: 24px 26px;
+        background: var(--gh-canvas);
+        border: 1px solid var(--gh-border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-card);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .timeline-card:hover {
+        transform: translateY(-2px);
+        border-color: var(--gh-border-strong);
+    }
+
+    .timeline-card-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 14px;
+    }
+
+    .timeline-company {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--gh-text);
+        margin: 0 0 4px;
+    }
+
+    .timeline-role {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--gh-green-4);
+        margin: 0 0 4px;
+    }
+
+    .timeline-meta {
+        font-size: 13px;
+        color: var(--gh-text-muted);
+        margin: 0;
+    }
+
+    .timeline-logo {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 130px;
+        height: 48px;
+    }
+
+    .timeline-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .timeline-logo.is-square {
+        width: 48px;
+    }
+
+    .timeline-logo.is-square img {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .timeline-desc {
+        font-size: 15px;
+        line-height: 1.65;
+        color: var(--gh-text-muted);
+        margin: 0 0 16px;
+    }
+
+    .timeline-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .timeline-tags span {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--gh-text);
+        background: var(--gh-elevated);
+        border: 1px solid var(--gh-border);
+        border-radius: 6px;
+        padding: 4px 9px;
+    }
+
+    @@media (max-width: 768px) {
+        .timeline-item {
+            grid-template-columns: 20px 1fr;
+            gap: 0 12px;
+        }
+
+        .timeline-date {
+            grid-column: 2;
+            grid-row: 1;
+            flex-direction: row;
+            gap: 6px;
+            align-items: center;
+            padding-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .timeline-date-end::before {
+            content: '–';
+            margin-right: 6px;
+            color: var(--gh-text-muted);
+        }
+
+        .timeline-rail {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+        }
+
+        .timeline-dot {
+            margin-top: 4px;
+        }
+
+        .timeline-card {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .timeline-logo {
+            display: none;
+        }
+    }
+</style>

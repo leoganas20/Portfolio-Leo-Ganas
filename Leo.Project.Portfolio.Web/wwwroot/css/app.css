@@ -516,49 +516,6 @@ ul {
     overflow: hidden;
 }
 
-/* Portfolio Gallery */
-.portfolio-gallery {
-    padding: 60px 0;
-    z-index: 20;
-}
-
-
-.my-work {
-    padding: 60px 0;
-    z-index: 20;
-}
-
-    .my-work h2 {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 40px;
-    }
-
-.services {
-    padding: 60px 0;
-    z-index: 20;
-}
-
-    .services h2 {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 40px;
-    }
-#about {
-    padding: 60px 0;
-    z-index: 20;
-}
-    .portfolio-gallery h2 {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 40px;
-    }
-.contact h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
 h2, h3, h4, h5, h6 {
     color: var(--gh-text);
 }

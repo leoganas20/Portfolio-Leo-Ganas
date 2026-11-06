@@ -1,82 +1,151 @@
 
 
-<section id="skills" style="padding: 80px 0; background-color: var(--gh-bg); border-top: 1px solid var(--gh-border);">
+<section id="skills" class="skills-section-v2">
     <div class="container">
         <div class="section-head">
             <span class="section-eyebrow">// skills</span>
             <h2 class="section-title">Technical expertise</h2>
             <p class="section-sub">The Microsoft stack I work in every day, plus the tools I reach for around it.</p>
         </div>
-        <div class="skills-container" style="background: var(--gh-canvas); border: 1px solid var(--gh-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 40px;">
 
-            <div class="skills-section mb-10">
-                <div class="d-flex align-center mb-4">
-                    <img src="images/microsoftlogo.png" style="width: 20px; height: 20px; object-fit: contain; margin-right: 12px;" alt="Microsoft Logo" />
-                    <MudText Typo="Typo.h6" Style="font-weight: 600; color: var(--gh-text);">Microsoft Tech Stack</MudText>
+        <div class="skill-groups">
+            @foreach (var group in SkillGroups)
+            {
+                <div class="skill-group">
+                    <div class="skill-group-head">
+                        <MudIcon Icon="@group.Icon" Class="skill-group-icon" />
+                        <h3 class="skill-group-title">@group.Title</h3>
+                    </div>
+                    <div class="skill-chips">
+                        @foreach (var skill in group.Skills)
+                        {
+                            <span class="skill-chip">@skill</span>
+                        }
+                    </div>
                 </div>
-                <div class="d-flex flex-wrap gap-2">
-                    @foreach (var skill in MicrosoftSkills)
-                    {
-                        <div class="skill-tag">
-                            <MudIcon Icon="@Icons.Material.Filled.Check" Size="Size.Small" Style="color: var(--gh-green-3); margin-right: 6px;" />
-                            <span>@skill</span>
-                        </div>
-                    }
-                </div>
-            </div>
-
-            <div class="skills-section">
-                <div class="d-flex align-center mb-4">
-                    <MudIcon Icon="@Icons.Material.Filled.Extension" Size="Size.Small" Style="color: var(--gh-text-muted); margin-right: 12px;" />
-                    <MudText Typo="Typo.h6" Style="font-weight: 600; color: var(--gh-text);">Specialized Skills</MudText>
-                </div>
-                <div class="d-flex flex-wrap gap-2">
-                    @foreach (var skill in OtherSkills)
-                    {
-                        <div class="skill-tag secondary">
-                            <span>@skill</span>
-                        </div>
-                    }
-                </div>
-            </div>
+            }
         </div>
+
+        <p class="skills-also">
+            <span class="skills-also-label">Also:</span> Newtonsoft.Json, Unity 3D/2D, WebGL
+        </p>
     </div>
 </section>
 
 @code {
-    private string[] MicrosoftSkills = new[] { 
-        "C#", ".NET 9", ".NET 8", "Blazor WASM", "ASP.NET", "MVC", "ASP.NET Core", "Flutter / Dart", "Telerik UI", "MudBlazor", "Azure Functions", "Entra ID", "Azure DevOps", "SQL Server", 
-        "Clean Architecture", "CQRS", "DDD", "Entity Framework", "Web API", ".NET MAUI", "Blazor Hybrid"
-    };
+    private record SkillGroup(string Title, string Icon, string[] Skills);
 
-    private string[] OtherSkills = new[] { 
-        "Provider (State Mgmt)", "SQLite", "Dio / HTTP", "Go Router", "Unit Testing", "CI/CD Pipelines", "OpenAPI", "Newtonsoft", "AutoMapper", "FluentValidation", "Unity 3D/2D", "WebGL"
+    private readonly SkillGroup[] SkillGroups =
+    {
+        new("Core .NET & APIs", Icons.Material.Filled.Code,
+            new[] { "C#", ".NET 9", ".NET 8", "ASP.NET Core", "ASP.NET MVC", "Web API", "Minimal APIs" }),
+        new("Data", Icons.Material.Filled.Storage,
+            new[] { "SQL Server", "Entity Framework", "SQLite" }),
+        new("Front end", Icons.Material.Filled.Web,
+            new[] { "Blazor WebAssembly", "Blazor Hybrid", "MudBlazor", "Telerik UI", "Kendo UI", "HTML / CSS", "JavaScript" }),
+        new("Mobile", Icons.Material.Filled.Smartphone,
+            new[] { ".NET MAUI", "Flutter / Dart", "Provider", "Go Router", "Dio" }),
+        new("Cloud & DevOps", Icons.Material.Filled.Cloud,
+            new[] { "Azure DevOps", "Azure Functions", "Entra ID", "CI/CD Pipelines", "OpenAPI / Swagger" }),
+        new("Architecture & Quality", Icons.Material.Filled.AccountTree,
+            new[] { "Clean Architecture", "CQRS", "DDD", "Unit Testing", "AutoMapper", "FluentValidation" }),
     };
 }
 
 <style>
-    .skill-tag {
+    .skills-section-v2 {
+        padding: 80px 0;
+        background-color: var(--gh-bg);
+        border-top: 1px solid var(--gh-border);
+    }
+
+    .skill-groups {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .skill-group {
+        padding: 24px;
+        background: var(--gh-canvas);
+        border: 1px solid var(--gh-border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-card);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .skill-group:hover {
+        transform: translateY(-2px);
+        border-color: var(--gh-border-strong);
+    }
+
+    .skill-group-head {
         display: flex;
         align-items: center;
-        background: var(--gh-bg);
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .skill-group .skill-group-icon {
+        box-sizing: content-box;
+        padding: 8px;
+        border-radius: 10px;
+        background: var(--gh-elevated);
         border: 1px solid var(--gh-border);
-        border-radius: 20px;
-        padding: 6px 16px;
-        font-size: 14px;
+        color: var(--gh-green-4);
+        font-size: 20px;
+    }
+
+    .skill-group-title {
+        font-size: 17px;
+        font-weight: 600;
         color: var(--gh-text);
-        font-weight: 500;
-        transition: all 0.2s;
+        margin: 0;
     }
-    .skill-tag:hover {
-        border-color: var(--gh-green-3);
-        transform: translateY(-2px);
+
+    .skill-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
     }
-    .skill-tag.secondary {
-        background: transparent;
+
+    .skill-chip {
+        font-family: var(--font-mono);
+        font-size: 12.5px;
+        color: var(--gh-text);
+        background: var(--gh-elevated);
+        border: 1px solid var(--gh-border);
+        border-radius: 6px;
+        padding: 5px 10px;
+        transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .skill-chip:hover {
+        border-color: var(--gh-primary);
+    }
+
+    .skills-also {
+        text-align: center;
+        margin: 28px 0 0;
+        font-size: 14px;
         color: var(--gh-text-muted);
     }
-    .skill-tag.secondary:hover {
-        border-color: var(--gh-text);
-        color: var(--gh-text);
+
+    .skills-also-label {
+        font-family: var(--font-mono);
+        color: var(--gh-green-4);
+        margin-right: 6px;
+    }
+
+    @@media (max-width: 992px) {
+        .skill-groups {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .skill-groups {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

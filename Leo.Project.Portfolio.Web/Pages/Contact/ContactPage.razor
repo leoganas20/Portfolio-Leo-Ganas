@@ -4,7 +4,7 @@
 @inject RequestEmailService RequestEmail
 @inject ISnackbar Snackbar
 
-<section id="contact" class="contact reveal stagger-1" style="background-color: var(--gh-bg); border-top: 1px solid var(--gh-border); padding: 100px 0;">
+<section id="contact" class="contact-section">
     <LoaderPage IsVisible="@IsVisible" />
     <div class="container">
         <div class="section-head">
@@ -13,141 +13,167 @@
             <p class="section-sub">Open to remote .NET roles and freelance projects. Reach out through any of these channels.</p>
         </div>
 
-        <MudGrid Spacing="6" Class="mt-8" Justify="Justify.Center">
-            <!-- Contact Information -->
-            <MudItem xs="12" sm="10" md="8" lg="6">
-                <div class="contact-info-panel reveal stagger-2">
-                    <div class="contact-method-list">
-                        <a href="mailto:leoganas.jr@gmail.com" class="contact-method reveal stagger-1">
-                            <div class="icon-box" style="background-color: rgba(234, 67, 53, 0.1); border-color: rgba(234, 67, 53, 0.2);">
-                                <MudIcon Icon="@Icons.Material.Filled.Email" Style="color: #EA4335;" />
-                            </div>
-                            <div class="details">
-                                <MudText Typo="Typo.subtitle2" Style="color: var(--gh-text-muted);">Email</MudText>
-                                <MudText Typo="Typo.body1" Style="color: var(--gh-text); font-weight: 500;">leoganas.jr@gmail.com</MudText>
-                            </div>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/leo-ganas-468b50212/" target="_blank" class="contact-method reveal stagger-2">
-                            <div class="icon-box" style="background-color: rgba(0, 119, 181, 0.1); border-color: rgba(0, 119, 181, 0.2);">
-                                <MudIcon Icon="@Icons.Custom.Brands.LinkedIn" Style="color: #0077B5;" />
-                            </div>
-                            <div class="details">
-                                <MudText Typo="Typo.subtitle2" Style="color: var(--gh-text-muted);">LinkedIn</MudText>
-                                <MudText Typo="Typo.body1" Style="color: var(--gh-text); font-weight: 500;">Leonardo L. Ganas Jr.</MudText>
-                            </div>
-                        </a>
-
-                        <a href="https://wa.me/+639161452948" target="_blank" class="contact-method reveal stagger-3">
-                            <div class="icon-box" style="background-color: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.2);">
-                                <MudIcon Icon="@Icons.Custom.Brands.WhatsApp" Style="color: #25D366;" />
-                            </div>
-                            <div class="details">
-                                <MudText Typo="Typo.subtitle2" Style="color: var(--gh-text-muted);">WhatsApp</MudText>
-                                <MudText Typo="Typo.body1" Style="color: var(--gh-text); font-weight: 500;">+63 916 145 2948</MudText>
-                            </div>
-                        </a>
-
-                        <a href="https://www.upwork.com/freelancers/~016297b0547fe38cce" target="_blank" class="contact-method reveal stagger-4">
-                            <div class="icon-box" style="background-color: rgba(20, 168, 0, 0.1); border-color: rgba(20, 168, 0, 0.2);">
-                                <MudIcon Icon="@Icons.Material.Filled.Work" Style="color: #14A800;" />
-                            </div>
-                            <div class="details">
-                                <MudText Typo="Typo.subtitle2" Style="color: var(--gh-text-muted);">Upwork</MudText>
-                                <MudText Typo="Typo.body1" Style="color: var(--gh-text); font-weight: 500;">Freelance Profile</MudText>
-                            </div>
-                        </a>
-                    </div>
+        <div class="contact-panel">
+            <div class="contact-cta">
+                <span class="contact-status"><span class="contact-status-dot"></span>Available for new opportunities</span>
+                <h3 class="contact-cta-title">Hiring a .NET developer?</h3>
+                <p class="contact-cta-text">
+                    Send a short note about the role or project and I'll get back to you.
+                </p>
+                <div class="contact-cta-actions">
+                    <a class="gh-btn-primary" href="mailto:leoganas.jr@gmail.com">
+                        <MudIcon Icon="@Icons.Material.Filled.Email" Size="Size.Small" />
+                        Email me
+                    </a>
+                    <a class="gh-btn-outline" href="Leonardo_Ganas_CV.pdf" download="Leonardo-Ganas-CV.pdf">
+                        <MudIcon Icon="@Icons.Material.Filled.Download" Size="Size.Small" />
+                        Download CV
+                    </a>
                 </div>
-            </MudItem>
-        </MudGrid>
+            </div>
+
+            <div class="contact-grid">
+                <a href="mailto:leoganas.jr@gmail.com" class="contact-tile">
+                    <span class="contact-tile-icon" style="color: #EA4335;"><MudIcon Icon="@Icons.Material.Filled.Email" /></span>
+                    <span class="contact-tile-label">Email</span>
+                    <span class="contact-tile-value">leoganas.jr@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/leo-ganas-468b50212/" target="_blank" rel="noopener" class="contact-tile">
+                    <span class="contact-tile-icon" style="color: #0A66C2;"><MudIcon Icon="@Icons.Custom.Brands.LinkedIn" /></span>
+                    <span class="contact-tile-label">LinkedIn</span>
+                    <span class="contact-tile-value">Leonardo L. Ganas Jr.</span>
+                </a>
+                <a href="https://wa.me/+639161452948" target="_blank" rel="noopener" class="contact-tile">
+                    <span class="contact-tile-icon" style="color: #25D366;"><MudIcon Icon="@Icons.Custom.Brands.WhatsApp" /></span>
+                    <span class="contact-tile-label">WhatsApp</span>
+                    <span class="contact-tile-value">+63 916 145 2948</span>
+                </a>
+                <a href="https://www.upwork.com/freelancers/~016297b0547fe38cce" target="_blank" rel="noopener" class="contact-tile">
+                    <span class="contact-tile-icon" style="color: #14A800;"><MudIcon Icon="@Icons.Material.Filled.Work" /></span>
+                    <span class="contact-tile-label">Upwork</span>
+                    <span class="contact-tile-value">Freelance profile</span>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
 @code {
-    // Contact form logic hidden for now as per user request
     private bool IsVisible { get; set; } = false;
 }
 
 <style>
-    .contact-info-panel {
-        background-color: var(--gh-canvas);
-        border: 1px solid var(--gh-border);
-        border-radius: 16px;
-        padding: 40px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    .contact-section {
+        padding: 80px 0 96px;
+        background-color: var(--gh-bg);
+        border-top: 1px solid var(--gh-border);
     }
 
-    .contact-method-list {
+    .contact-panel {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 40px;
+        align-items: center;
+        padding: 44px;
+        background:
+            radial-gradient(600px circle at 0% 100%, var(--gh-glow), transparent 60%),
+            var(--gh-canvas);
+        border: 1px solid var(--gh-border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-card);
+    }
+
+    .contact-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 12.5px;
+        color: var(--gh-green-4);
+        margin-bottom: 16px;
+    }
+
+    .contact-status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--gh-green-4);
+        box-shadow: 0 0 10px var(--gh-green-4);
+    }
+
+    .contact-cta-title {
+        font-size: clamp(24px, 2.6vw, 30px);
+        font-weight: 700;
+        color: var(--gh-text);
+        margin: 0 0 12px;
+    }
+
+    .contact-cta-text {
+        font-size: 16px;
+        line-height: 1.65;
+        color: var(--gh-text-muted);
+        margin: 0 0 28px;
+    }
+
+    .contact-cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .contact-tile {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-method {
-        display: flex;
-        align-items: center;
-        padding: 16px;
-        background: var(--gh-bg);
+        gap: 4px;
+        padding: 20px;
+        background: var(--gh-elevated);
         border: 1px solid var(--gh-border);
-        border-radius: 12px;
+        border-radius: var(--radius-md);
         text-decoration: none !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
+        min-width: 0;
+        transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .contact-method:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    .contact-tile:hover {
+        transform: translateY(-2px);
+        border-color: var(--gh-border-strong);
     }
 
-    /* Target specific hover border colors */
-    .contact-method:nth-child(1):hover { border-color: #EA4335; }
-    .contact-method:nth-child(2):hover { border-color: #0077B5; }
-    .contact-method:nth-child(3):hover { border-color: #25D366; }
-    .contact-method:nth-child(4):hover { border-color: #14A800; }
-
-    .icon-box {
-        width: 48px;
-        height: 48px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 16px;
-        border: 1px solid;
-        flex-shrink: 0;
+    .contact-tile-icon {
+        display: inline-flex;
+        margin-bottom: 10px;
     }
 
-    .details {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
+    .contact-tile-label {
+        font-size: 13px;
+        color: var(--gh-text-muted);
     }
 
-    .details .mud-typography-body1 {
+    .contact-tile-value {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--gh-text);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    .mb-12 {
-        margin-bottom: 48px;
+    @@media (max-width: 900px) {
+        .contact-panel {
+            grid-template-columns: 1fr;
+            padding: 28px;
+        }
     }
 
-    @@media (max-width: 600px) {
-        .contact-info-panel {
-            padding: 24px;
-        }
-        
-        .contact-method {
-            padding: 12px;
-        }
-        
-        .icon-box {
-            width: 40px;
-            height: 40px;
-            margin-right: 12px;
+    @@media (max-width: 520px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>
