@@ -22,29 +22,49 @@
 </div>
 
 @code {
+    private static readonly string[] BodyFont = { "Inter", "-apple-system", "Segoe UI", "Helvetica", "Arial", "sans-serif" };
+    private static readonly string[] DisplayFont = { "Space Grotesk", "Inter", "Segoe UI", "sans-serif" };
+
     private MudTheme _currentTheme = new MudTheme()
     {
         PaletteLight = new PaletteLight()
         {
-            Primary = "#1f883d",
-            Background = "#ffffff",
-            Surface = "#f6f8fa",
-            TextPrimary = "#1f2328",
-            TextSecondary = "#656d76",
-            AppbarBackground = "#f6f8fa",
-            AppbarText = "#1f2328",
-            LinesDefault = "#d0d7de"
+            Primary = "#168a48",
+            Background = "#fbfcfd",
+            Surface = "#f3f5f8",
+            TextPrimary = "#12171d",
+            TextSecondary = "#5b6573",
+            AppbarBackground = "#f3f5f8",
+            AppbarText = "#12171d",
+            LinesDefault = "#dde2e8"
         },
         PaletteDark = new PaletteDark()
         {
-            Primary = "#238636",
-            Background = "#0d1117",
-            Surface = "#161b22",
-            TextPrimary = "#e6edf3",
-            TextSecondary = "#848d97",
-            AppbarBackground = "#161b22",
-            AppbarText = "#e6edf3",
-            LinesDefault = "#30363d"
+            Primary = "#22a35a",
+            Background = "#090c10",
+            Surface = "#10151c",
+            TextPrimary = "#e9eef4",
+            TextSecondary = "#8b96a5",
+            AppbarBackground = "#10151c",
+            AppbarText = "#e9eef4",
+            LinesDefault = "#1f2731"
+        },
+        Typography = new Typography()
+        {
+            Default = new DefaultTypography { FontFamily = BodyFont },
+            H1 = new H1Typography { FontFamily = DisplayFont },
+            H2 = new H2Typography { FontFamily = DisplayFont },
+            H3 = new H3Typography { FontFamily = DisplayFont },
+            H4 = new H4Typography { FontFamily = DisplayFont },
+            H5 = new H5Typography { FontFamily = DisplayFont },
+            H6 = new H6Typography { FontFamily = DisplayFont },
+            Subtitle1 = new Subtitle1Typography { FontFamily = BodyFont },
+            Subtitle2 = new Subtitle2Typography { FontFamily = BodyFont },
+            Body1 = new Body1Typography { FontFamily = BodyFont },
+            Body2 = new Body2Typography { FontFamily = BodyFont },
+            Button = new ButtonTypography { FontFamily = BodyFont },
+            Caption = new CaptionTypography { FontFamily = BodyFont },
+            Overline = new OverlineTypography { FontFamily = BodyFont }
         }
     };
 

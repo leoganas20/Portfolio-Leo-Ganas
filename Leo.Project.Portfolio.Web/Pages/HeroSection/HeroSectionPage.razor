@@ -94,10 +94,16 @@
 
 <style>
     .hero-section {
+        position: relative;
         background-color: var(--gh-bg);
+        background-image:
+            radial-gradient(700px circle at 78% 10%, var(--gh-glow), transparent 60%),
+            radial-gradient(500px circle at 8% 90%, var(--gh-glow), transparent 65%),
+            radial-gradient(var(--gh-dot) 1px, transparent 1px);
+        background-size: auto, auto, 22px 22px;
         color: var(--gh-text);
-        padding-top: 48px;
-        padding-bottom: 56px;
+        padding-top: 56px;
+        padding-bottom: 72px;
     }
 
     /* Profile Sidebar Styles */
@@ -173,90 +179,67 @@
         text-decoration: none;
     }
     .metadata-item a:hover, .tx-link:hover {
-        color: lime !important;
-        text-decoration: underline;
+        color: var(--gh-primary-hover) !important;
         cursor: pointer;
     }
     .gh-btn-sidebar {
         display: block;
         text-align: center;
-        background-color: var(--gh-canvas);
+        background-color: var(--gh-elevated);
         color: var(--gh-text);
-        padding: 6px 16px;
-        border-radius: 6px;
-        border: 1px solid var(--gh-border);
+        padding: 8px 16px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--gh-border-strong);
         font-weight: 500;
         font-size: 14px;
-        transition: 0.2s;
+        transition: transform 0.15s ease, border-color 0.2s ease, background-color 0.2s ease;
         text-decoration: none;
     }
     .gh-btn-sidebar:hover {
-        background-color: var(--gh-border);
+        border-color: var(--gh-text-muted);
+        transform: translateY(-1px);
         cursor: pointer;
-       
+    }
+    .gh-btn-sidebar:active {
+        transform: translateY(0) scale(0.98);
     }
 
     /* README Section Styles */
     .readme-container {
         border: 1px solid var(--gh-border);
-        border-radius: 6px;
+        border-radius: var(--radius-lg);
         background: var(--gh-canvas);
-        padding: 32px;
+        box-shadow: var(--shadow-card);
+        padding: 36px;
     }
     .readme-header {
         border-bottom: 1px solid var(--gh-border);
-        margin: -32px -32px 32px -32px;
-        padding: 12px 32px;
-        font-size: 14px;
+        margin: -36px -36px 32px -36px;
+        padding: 14px 36px;
+        font-size: 13px;
         color: var(--gh-text-muted);
+        background: var(--gh-elevated);
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     }
     .readme-title {
-        font-family: monospace;
+        font-family: var(--font-mono);
     }
     .readme-heading {
-        font-size: 32px;
-        font-weight: 600;
-        margin-bottom: 24px;
-        border-bottom: 1px solid var(--gh-border);
-        padding-bottom: 8px;
+        font-family: var(--font-display);
+        font-size: clamp(32px, 4vw, 44px);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 20px;
     }
     .readme-text {
         font-size: 18px;
-        line-height: 1.6;
+        line-height: 1.65;
+        color: var(--gh-text-muted);
+        max-width: 64ch;
+    }
+    .readme-text .fw-bold {
         color: var(--gh-text);
-    }
-    .readme-text b, .readme-text strong {
-        color: var(--gh-primary);
-    }
-
-    /* Action Buttons */
-    .gh-btn-primary {
-        background-color: var(--gh-primary);
-        color: white;
-        padding: 10px 20px;
-        border-radius: 6px;
-        font-weight: 600;
-        transition: 0.2s;
-        text-decoration: none;
-    }
-    
-    
-    .gh-btn-primary:hover {
-        background-color: var(--gh-primary-hover);
-        color: white;
-    }
-    .gh-btn-outline {
-        background-color: var(--gh-canvas);
-        color: var(--gh-text);
-        padding: 10px 20px;
-        border-radius: 6px;
-        border: 1px solid var(--gh-border);
-        font-weight: 600;
-        transition: 0.2s;
-        text-decoration: none;
-    }
-    .gh-btn-outline:hover {
-        background: var(--gh-border);
     }
 
     @@media (max-width: 960px) {

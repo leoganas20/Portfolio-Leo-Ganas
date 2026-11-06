@@ -5,7 +5,7 @@
 @inject IJSRuntime JS
 @inject Leo.Project.Portfolio.Web.Services.ThemeService ThemeService
 @inherits ComponentPageBase
-<header class="top-bar" style="background-color: var(--gh-bg); border-bottom: 1px solid var(--gh-border); color: var(--gh-text);">
+<header class="top-bar">
     <div class="container">
         <div class="logo">
             <img src="images/LGdevLogo.png" alt="LG Dev Software Portfolio Logo" width="100" style="object-fit: contain; @(ThemeService.IsDarkMode ? "filter: brightness(0) invert(1);" : "")">
@@ -42,11 +42,12 @@
         {
             <nav>
                 <ul class="nav-list">
-                    <li><a href="#hero-section" style="color: var(--gh-text);">Home</a></li>
-                    <li><a href="#services" style="color: var(--gh-text);">Services</a></li>
-                    <li><a href="#skills" style="color: var(--gh-text);">Skills</a></li>
-                    <li><a href="#portfolio-gallery" style="color: var(--gh-text);">Experience</a></li>
-                    <li><a href="#contact" style="color: var(--gh-text);">Contact</a></li>
+                    <li><a class="nav-link-item" href="#hero-section">Home</a></li>
+                    <li><a class="nav-link-item" href="#services">Services</a></li>
+                    <li><a class="nav-link-item" href="#skills">Skills</a></li>
+                    <li><a class="nav-link-item" href="#my-work">Projects</a></li>
+                    <li><a class="nav-link-item" href="#portfolio-gallery">Experience</a></li>
+                    <li><a class="nav-link-item" href="#contact">Contact</a></li>
                     <li class="chip-item">
                         <MudIconButton Icon="@(ThemeService.IsDarkMode ? Icons.Material.Filled.WbSunny : Icons.Material.Filled.ModeNight)" 
                                        OnClick="@ThemeService.ToggleThemeAsync" 
@@ -87,6 +88,7 @@
                     <MudNavLink Style="color: var(--gh-text) !important;" Href="#hero-section">Home</MudNavLink>
                     <MudNavLink Style="color: var(--gh-text) !important;" Href="#services">Services</MudNavLink>
                     <MudNavLink Style="color: var(--gh-text) !important;" Href="#skills">Skills</MudNavLink>
+                    <MudNavLink Style="color: var(--gh-text) !important;" Href="#my-work">Projects</MudNavLink>
                     <MudNavLink Style="color: var(--gh-text) !important;" Href="#portfolio-gallery">Experience</MudNavLink>
                     <MudNavLink Style="color: var(--gh-text) !important;" Href="#contact">Contact</MudNavLink>
                 </MudNavMenu>

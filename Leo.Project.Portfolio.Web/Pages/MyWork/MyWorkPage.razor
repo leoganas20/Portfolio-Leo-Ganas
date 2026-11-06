@@ -3,8 +3,11 @@
 
 <section id="my-work" class="my-work" style="background-color: var(--gh-bg); border-top: 1px solid var(--gh-border); padding: 80px 0;">
     <div class="container">
-        <MudText Typo="Typo.h2" Style="font-weight: 800; color: var(--gh-text); text-align: center; margin-bottom: 12px; font-size: 32px;">Featured Projects & Accomplishments</MudText>
-        <MudText Typo="Typo.subtitle1" Style="color: var(--gh-text-muted); text-align: center; margin-bottom: 60px;">A selection of impact-driven solutions developed for diverse industries.</MudText>
+        <div class="section-head">
+            <span class="section-eyebrow">// featured work</span>
+            <h2 class="section-title">Projects &amp; accomplishments</h2>
+            <p class="section-sub">Production systems I've built and maintained for government agencies and private-sector teams.</p>
+        </div>
         <MudCard Elevation="0" Class="accomplishment-card reveal">
             <MudCardContent Class="d-flex justify-content-center">
                <MudGrid Class="element-grid" Style="width:100%">
@@ -176,7 +179,7 @@
             </MudCardContent>
         </MudCard>
 
-        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 100px;">
+        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 56px;">
             <MudCardContent Class="d-flex justify-content-center">
                <MudGrid Class="element-grid" Style="width:100%">
                     <MudItem xs="12" sm="12" lg="6" md="12"  Class="summar-project">
@@ -424,7 +427,7 @@
         </MudCard>
 
         <!-- Electronic Leave Application System (Provincial Government) -->
-        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 100px;">
+        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 56px;">
             <MudCardContent Class="d-flex justify-content-center">
                 <MudGrid Class="element-grid" Style="width:100%">
                     <MudItem xs="12" sm="12" lg="6" md="12" Class="summar-project">
@@ -592,7 +595,7 @@
         </MudCard>
 
         <!-- Document Management System (DSWD) -->
-        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 100px;">
+        <MudCard Elevation="0" Class="accomplishment-card reveal" Style="margin-top: 56px;">
             <MudCardContent Class="d-flex justify-content-center">
                 <MudGrid Class="element-grid" Style="width:100%">
                     <MudItem xs="12" sm="12" lg="6" md="12" Class="summar-project">
@@ -1041,15 +1044,16 @@
     .accomplishment-card {
         background: var(--gh-canvas) !important;
         border: 1px solid var(--gh-border) !important;
-        border-radius: 12px !important;
+        border-radius: var(--radius-lg) !important;
+        box-shadow: var(--shadow-card) !important;
         padding: 40px;
-        transition: all 0.3s ease;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
     .accomplishment-card:hover {
-        border-color: var(--gh-primary) !important;
-        box-shadow: 0 0 20px rgba(35, 134, 54, 0.1);
-        transform: translateY(-4px);
+        border-color: var(--gh-border-strong) !important;
+        box-shadow: var(--shadow-card), 0 0 0 1px var(--gh-glow) !important;
+        transform: translateY(-2px);
     }
 
     .web-section{

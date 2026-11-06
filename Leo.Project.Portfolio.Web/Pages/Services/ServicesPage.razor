@@ -1,8 +1,9 @@
 <section id="services" class="services-section" style="padding: 80px 0; background-color: var(--gh-bg); border-top: 1px solid var(--gh-border);">
     <div class="container">
-        <div class="d-flex align-center mb-12">
-            <MudIcon Icon="@Icons.Material.Filled.Terminal" Style="color: var(--gh-primary); font-size: 28px; margin-right: 12px;" />
-            <MudText Typo="Typo.h2" Style="font-weight: 700; color: var(--gh-text); letter-spacing: -0.5px; font-size: 24px;">Services</MudText>
+        <div class="section-head">
+            <span class="section-eyebrow">// services</span>
+            <h2 class="section-title">What I build for teams</h2>
+            <p class="section-sub">Full-stack .NET work across web, mobile, APIs and cloud &mdash; from greenfield builds to modernizing legacy systems.</p>
         </div>
 
         <div class="github-services-grid">
@@ -62,7 +63,7 @@
             <!-- UI/UX Systems -->
             <div class="gh-service-card">
                 <div class="gh-service-header">
-                    <MudIcon Icon="@Icons.Material.Filled.Palette" Style="color: #bc8cff; font-size: 20px;" />
+                    <MudIcon Icon="@Icons.Material.Filled.Palette" Style="color: #2dd4bf; font-size: 20px;" />
                     <MudText Typo="Typo.h3" Style="font-weight: 600; color: #bc8cff; font-size: 1.1rem;">UI/UX Design & Implementation</MudText>
                 </div>
                 <MudText Typo="Typo.body2" Style="color: var(--gh-text-muted); line-height: 1.6; margin: 12px 0;">
@@ -114,29 +115,45 @@
 <style>
     .github-services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 20px;
     }
 
     .gh-service-card {
         background: var(--gh-canvas);
         border: 1px solid var(--gh-border);
-        border-radius: 6px;
-        padding: 16px;
-        transition: border-color 0.2s;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-card);
+        padding: 24px;
+        transition: transform 0.2s ease, border-color 0.2s ease;
         display: flex;
         flex-direction: column;
         height: 100%;
     }
 
     .gh-service-card:hover {
-        border-color: var(--gh-text-muted);
+        border-color: var(--gh-border-strong);
+        transform: translateY(-2px);
     }
 
     .gh-service-header {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
+    }
+
+    .gh-service-header .mud-icon-root {
+        box-sizing: content-box;
+        padding: 9px;
+        border-radius: 10px;
+        background: var(--gh-elevated);
+        border: 1px solid var(--gh-border);
+        flex-shrink: 0;
+    }
+
+    .gh-service-header .mud-typography {
+        color: var(--gh-text) !important;
+        font-size: 1.05rem !important;
     }
 
     .gh-service-meta {
